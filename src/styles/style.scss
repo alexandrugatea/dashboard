@@ -1,0 +1,9 @@
+// dependencies
+@use "./partials/variables" as *;
+@use "./partials/mq" as *;
+@use "./partials/mixins" as *;
+@use "./partials/reset";
+@use "./partials/globals";
+
+// components
+@use "./partials/sidebar";

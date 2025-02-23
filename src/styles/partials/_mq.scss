@@ -1,0 +1,217 @@
+@use "sass:math";
+@use "sass:list";
+@use "sass:meta";
+@use "sass:map";
+@use "sass:string";
+
+$global-font-size: 100% !default;
+
+@function strip-unit($num) {
+    @return math.div($num , (math.div($num, $num)));
+}
+
+@function rem-calc($values, $base: null) {
+  $rem-values: ();
+  $count: list.length($values); 
+
+  @if $base == null {
+    $base: $global-font-size;
+  }
+
+  @if math.unit($base) == '%' {
+    $base: math.div($base, 100%) * 16px;
+  }
+
+  @if math.unit($base) == 'rem' {
+    $base: strip-unit($base) * 16px;
+  }
+
+  @for $i from 1 through $count {
+    $value: list.nth($values, $i);
+
+    @if math.unit($value) == 'px' {
+      $value: strip-unit($value);
+    }
+
+    @if math.is-unitless($value) {
+      $value: $value * 1px; // Ensure it's px before conversion
+    }
+
+    $rem-values: list.append($rem-values, -zf-to-rem($value, $base));
+  }
+
+  @return if($count == 1, list.nth($rem-values, 1), $rem-values);
+}
+
+@function -zf-bp-to-em($value) {
+  @if math.unit($value) == 'px' or unitless($value) {
+    $value: rem-calc($value, $base: 16px);
+  }
+
+  @return strip-unit($value) * 1em;
+}
+
+@function -zf-to-rem($value, $base: null) {
+  @if meta.type-of($value) != 'number' {
+    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+    @return $value;
+  }
+
+  @if math.unit($value) == 'em' {
+    $value: strip-unit($value) * 1rem;
+  }
+
+  @if math.unit($value) != 'rem' {
+    $value: math.div(strip-unit($value), strip-unit($base)) * 1rem;
+  }
+
+  @if $value == 0rem {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+@function unitless-calc($value, $base: null) {
+  @if $base == null {
+    $base: $global-font-size;
+  }
+
+  @if unit($base) == '%' {
+    $base: math.div($base, 100%) * 16px;
+  }
+
+  @if unit($base) == 'rem' {
+    $base: strip-unit($base) * 16px;
+  }
+
+  @if unit($base) == 'em' {
+    $base: strip-unit($base) * 16px;
+  }
+
+  @if unit($value) == '%' {
+    $value: math.div($value, 100%) * $base;
+  }
+
+  @if unit($value) == 'rem' {
+    $value: strip-unit($value) * $base;
+  }
+
+  @if unit($value) == 'em' {
+    $value: strip-unit($value) * $base;
+  }
+
+  @if unit($value) == 'px' {
+    @return math.div(strip-unit($value), strip-unit($base));
+  }
+
+  @if unitless($value) and ($value > 10) {
+    @return math.div($value, strip-unit($base));
+  }
+
+  @return $value;
+}
+
+@function map-to-list($map, $keep: 'both') {
+    $keep: if(list.index(('keys', 'values'), $keep), $keep, 'both');
+  
+    @if meta.type-of($map) == 'map' {
+      $keys: ();
+      $values: ();
+
+      @each $key, $val in $map {
+        $keys: list.append($keys, $key);
+        $values: list.append($values, $val);
+      }
+
+      @if $keep == 'keys' {
+        @return $keys;
+      }
+      @else if $keep == 'values' {
+        @return $values;
+      }
+      @else {
+        @return zip($keys, $values);
+      }
+    }
+
+    @return if(meta.type-of($map) != 'list', ($value,), $map);
+}
+
+$breakpoints: (
+  "small": 0,
+  "medium": 768px,
+  "large": 1024px,
+  "xlarge": 1200px,
+  "xxlarge": 1400px,
+  "xxxlarge": 1900px,
+  "2k": 2560px
+) !default;
+
+$print-breakpoint: large !default;
+
+$-zf-zero-breakpoint: small !default;
+$-zf-breakpoints-keys: map.keys($breakpoints);
+
+@if list.nth(map.values($breakpoints), 1) != 0 { // ✅ Fixed nth(map.values(...))
+    @error 'Your smallest breakpoint (defined in $breakpoints) must be set to "0".';
+  } @else {
+    $-zf-zero-breakpoint: list.nth(map.keys($breakpoints), 1); // ✅ Fixed nth(map.keys(...))
+  }
+
+$breakpoint-classes: (small medium large xlarge xxlarge) !default;
+
+@function -zf-map-next($map, $key) {
+  $values: map.keys($map);
+  $i: 0;
+
+  @if (map.has-key($map, $key)) {
+    $i: list.index($values, $key) + 1;
+  }
+
+  @if ($i > length($map) or $i == 0) {
+    @return null;
+  }
+  @else {
+    @return map.get($map, nth($values, $i));
+  }
+}
+
+@function -zf-breakpoints-less-than($key) {
+  $list: ();
+  $found_key: false;
+
+  @each $name in $-zf-breakpoints-keys {
+    @if ($name == $key) {
+      $found_key: true;
+    }
+    @if not $found_key {
+      $list: list.append($list, $name);
+    }
+  }
+  @return $list;
+}
+
+@if map.has-key($breakpoints, "small") {
+    $small-up: screen;
+    $small-only: string.unquote('screen and #{breakpoint("small only")}'); // ✅ Fixed unquote
+  }
+  
+  @if map.has-key($breakpoints, "medium") {
+    $medium-up: string.unquote('screen and #{breakpoint("medium")}'); // ✅ Fixed unquote
+    $medium-only: string.unquote('screen and #{breakpoint("medium only")}'); // ✅ Fixed unquote
+  }
+  
+  @if map.has-key($breakpoints, "large") {
+    $large-up: string.unquote('screen and #{breakpoint("large")}'); // ✅ Fixed unquote
+    $large-only: string.unquote('screen and #{breakpoint("large only")}'); // ✅ Fixed unquote
+  }
+  
+  @if map.has-key($breakpoints, "xlarge") {
+    $xlarge-up: string.unquote('screen and #{breakpoint("xlarge")}'); // ✅ Fixed unquote
+    $xlarge-only: string.unquote('screen and #{breakpoint("xlarge only")}'); // ✅ Fixed unquote
+  }
+  
+  @if map.has-key($breakpoints, "xxlarge") {
+    $xxlarge-up: string.unquote('screen and #{breakpoint("xxlarge")}'); // ✅ Fixed unquote
+  }

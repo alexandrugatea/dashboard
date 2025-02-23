@@ -15,7 +15,9 @@
   
   ::selection {
     background: accent(1);
-    color: $bodyBackground;
+    color: var(--page-color);
+
+    
   }
   
   img {

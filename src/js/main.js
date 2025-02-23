@@ -1,5 +1,12 @@
-// import scss styles for webpack compiling into css
+// Import scss styles for webpack compiling into css
 import '../styles/style.scss';
 
-const now = new Date();
-document.body.innerHTML += now.toString();
+// Import html components
+import sideBar from "../components/sidebar.html";
+import statusBar from "../components/statusbar.html";
+
+const sidebarContainer = document.getElementById('sideBar');
+sidebarContainer.innerHTML = sideBar;
+
+const statusBarContainer = document.getElementById('statusBar');
+statusBarContainer.innerHTML = statusBar;

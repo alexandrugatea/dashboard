@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { watchFile } = require('fs');
+const fs = require('fs');
 
 class InlineJavaScriptPlugin {
 	apply(compiler) {
@@ -26,7 +27,7 @@ class InlineJavaScriptPlugin {
 			);
 		});
 
-		// Hook into the `emit` phase to remove JS files after index.html is generated
+		// Remove JS files after embedding
 		compiler.hooks.emit.tapAsync('InlineJavaScriptPlugin', (compilation, cb) => {
 			Object.keys(compilation.assets).forEach((asset) => {
 				if (asset.endsWith('.js')) {
@@ -40,25 +41,37 @@ class InlineJavaScriptPlugin {
 
 module.exports = (env) => {
 	const isProd = env.mode === 'production';
+	const srcPath = path.resolve(__dirname, 'src');
+	const buildPath = path.resolve(__dirname, 'build');
+	const imagesPath = path.join(srcPath, 'images');
+	const hasImages = fs.existsSync(imagesPath) && fs.readdirSync(imagesPath).length > 0;
 
 	return {
 		mode: isProd ? 'production' : 'development',
-		entry: './src/js/main.js',
+		devtool: isProd ? false : 'inline-source-map',
+		entry: path.join(srcPath, 'js/main.js'),
 		output: {
-			path: path.resolve(__dirname, 'build'),
-			filename: 'bundle.js', // This file will be deleted after inlining
+			filename: 'bundle.js', // Will be removed after inlining
+			path: buildPath,
 			clean: true,
-		},
-		devServer: {
-			static: path.resolve(__dirname, 'build'),
-			port: 8080,
-			hot: true,
-			open: true,
-			watchFiles: ['src/**/*.html']
 		},
 		optimization: {
 			minimize: isProd,
 			minimizer: isProd ? [new TerserPlugin()] : [],
+		},
+		performance: {
+			maxAssetSize: 512000,
+			maxEntrypointSize: 512000,
+			hints: false,
+		},
+		devServer: {
+			static: {
+				directory: buildPath,
+			},
+			port: 3399,
+			hot: true,
+			open: true,
+			watchFiles: ['src/**/*.html'],
 		},
 		module: {
 			rules: [
@@ -77,13 +90,18 @@ module.exports = (env) => {
 					use: [
 						isProd ? MiniCssExtractPlugin.loader : 'style-loader',
 						'css-loader',
+						'postcss-loader',
 						{
-							loader: 'sass-loader',
-							options: {
-								implementation: require('sass'),
-							},
+							loader: 'sass-loader'
 						},
 					],
+				},
+				{
+					test: /\.(png|jpe?g|gif|svg|webp)$/i,
+					type: 'asset/resource',
+					generator: {
+						filename: 'images/[name][ext]',
+					},
 				},
 				{
 					test: /\.html$/,
@@ -98,7 +116,22 @@ module.exports = (env) => {
 				minify: isProd,
 			}),
 			new MiniCssExtractPlugin({ filename: 'styles.css' }),
-			...(isProd ? [new HtmlInlineCSSWebpackPlugin(), new InlineJavaScriptPlugin()] : []),
+			...(isProd ? [
+				new HtmlInlineCSSWebpackPlugin(),
+				new InlineJavaScriptPlugin(),
+			] : []),
+			...(hasImages
+				? [
+						new CopyWebpackPlugin({
+							patterns: [
+								{ from: imagesPath, to: path.join(buildPath, 'images'), force: true },
+							],
+						}),
+				  ]
+				: []),
 		],
+		resolve: {
+			extensions: ['.js', '.jsx', '.scss'],
+		},
 	};
 };

@@ -1,5 +1,3 @@
-@use "sass:math";
-
 :root {
     --accent: #ff4200; //#b4997f; Previous
     --accent-r: 255;
@@ -9,6 +7,7 @@
     --radius-circle: 10rem;
 }
 
+$v: #f00;
 $bodyBackground: #070707;
 $bodyText: #c7c7c7;
 

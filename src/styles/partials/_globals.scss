@@ -1,7 +1,3 @@
-@use "./variables" as *; 
-@use "./mixins" as *; 
-@use "./mq" as *; 
-
 body {
     background: $bodyBackground;
     color: $bodyText;

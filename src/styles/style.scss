@@ -1,9 +1,9 @@
 // dependencies
-@use "./partials/variables" as *;
-@use "./partials/mq" as *;
-@use "./partials/mixins" as *;
-@use "./partials/reset";
-@use "./partials/globals";
+@import "./partials/variables";
+@import "./partials/mq";
+@import "./partials/mixins";
+@import "./partials/reset";
+@import "./partials/globals";
 
 // components
-@use "./partials/sidebar";
+@import "./partials/sidebar";

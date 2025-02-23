@@ -1,0 +1,32 @@
+#app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: rem-calc(get($sidebar, expanded, width)) auto;
+    grid-template-rows: 1fr 50px; // 50px for statusbar
+
+    grid-template-areas: 
+    "sidebar main"
+    "sidebar statusbar";
+    transition: grid-template-columns 0.25s get($transitions, bezier);
+
+    &.collapsed {
+        grid-template-columns:  rem-calc(get($sidebar, collapsed, width)) auto;
+    }
+}
+
+#sideBar {
+    grid-area: sidebar;
+    background: red
+}
+
+#statusBar {
+    grid-area: statusbar;
+    background: green
+}
+
+#main {
+    grid-area: main;
+    background: blue;
+}

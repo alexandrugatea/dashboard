@@ -1,7 +1,9 @@
 // dependencies
 @import "./partials/base/variables";
+@import "./partials/base/fonts";
 @import "./partials/base/mq";
 @import "./partials/base/mixins";
+@import "./partials/base/functions";
 @import "./partials/base/reset";
 @import "./partials/base/globals";
 @import "./partials/base/forms";
@@ -9,3 +11,4 @@
 // components
 @import "./partials/components/app";
 @import "./partials/components/sidebar";
+@import "./partials/components/statusbar";

@@ -1,22 +1,40 @@
-@mixin flex-column-center {
-  display: flex;
-  height: 100%;
-
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: rem-calc(70);
-  @include breakpoint(small only) {
-    gap: rem-calc(42);
+@mixin flex($direction: row, $horizontal: center, $vertical: center, $inline: false, $wrap: false) {
+  $display: flex;
+  @if $inline == true or $inline == inline {
+    $display: inline-flex;
   }
-}
 
-@mixin glass ($color: $bodyBackground, $alpha: 0.7, $blur: 7px) {
-  backdrop-filter: blur($blur);
-  background-color: rgba($color, $alpha);
-}
+  display: $display;
+  flex-direction: $direction;
 
+  $horizontal-map: (
+    left: flex-start,
+    center: center,
+    right: flex-end,
+    edges: space-between,
+    even: space-evenly,
+    full: stretch
+  );
 
-@function accent($alpha: 1) {
-    @return rgba(var(--accent-r), var(--accent-g), var(--accent-b), $alpha);
+  $vertical-map: (
+    top: flex-start,
+    center: center,
+    bottom: flex-end,
+    edges: space-between,
+    even: space-evenly,
+    full: stretch
+  );
+
+  @if $wrap == wrap or $wrap == true {
+    flex-wrap: wrap;
+  }
+
+  @if ($direction == row) {
+    justify-content: map-get($horizontal-map, $horizontal);
+    align-items: map-get($vertical-map, $vertical);
+  } 
+  @else if ($direction == column) {
+    justify-content: map-get($vertical-map, $vertical);
+    align-items: map-get($horizontal-map, $horizontal);
+  }
 }

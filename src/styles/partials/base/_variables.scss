@@ -21,7 +21,26 @@
         --accent-g: 66;
         --accent-b: 66;
 
-        --page-background: #c7c7c7;
-        --page-color: #070707;
+        --page-background: #fefefe;
+        --page-color: #f00;
     }
 }
+
+$transitions: (
+    bezier: cubic-bezier(.41,-0.06,.54,1.15),
+    linear: linear,
+    inOut: ease-in-out,
+    in: ease-in,
+    out: ease-out
+);
+
+$sidebar: (
+    expanded: (
+        width: 250,
+        padding: 20,
+    ),
+    collapsed: (
+        width: 50,
+        padding: 10,
+    )
+)

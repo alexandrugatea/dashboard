@@ -10,11 +10,11 @@
   
   a {
     color: inherit;
-    text-decoration-color: accent(1);
+    text-decoration-color: var(--accent);
   }
   
   ::selection {
-    background: accent(1);
+    background: var(--accent);
     color: var(--page-color);
 
     

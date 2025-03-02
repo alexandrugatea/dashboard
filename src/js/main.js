@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     statusBarContainer.innerHTML = statusBar;
     mainContainer.innerHTML = main;
 
+    await new Promise(resolve => setTimeout(resolve, 0)); 
+
     const sideBarToggler = sidebarContainer.querySelector("#sidebarToggler");
 
     if (!sideBarToggler) {
@@ -39,27 +41,45 @@ document.addEventListener("DOMContentLoaded", async () => {
         sideBarToggler.classList.toggle('collapsed');
     }
 
-    const tabs = document.querySelectorAll(".sidebar-links li");
-    const tabContents = document.querySelectorAll("[id^='tab-']");
+    function setupTabs(container) {
+        if (!container) return;
 
-    tabs.forEach(tab => {
-        tab.addEventListener("click", function () {
-            const targetTab = document.getElementById(`tab-${this.dataset.tab}`);
+        const tabs = container.querySelectorAll("[data-tab-target]");
+        console.log(tabs);
 
-            // Remove 'active' class from all tabs and hide all contents
-            tabs.forEach(t => t.classList.remove("active"));
-            tabContents.forEach(content => content.style.display = "none");
+        tabs.forEach(tab => {
+            tab.addEventListener("click", function (e) {
+                const tabTarget = this.dataset.tabTarget; // Get target name
+                const section = this.closest("[data-tab-container]");
+                const targetTab = document.querySelector(`[data-tab-source="${tabTarget}"]`);
 
-            // Add 'active' class to clicked tab and show corresponding content
-            this.classList.add("active");
-            if (targetTab) targetTab.style.display = "block";
+                if (!targetTab) {
+                    console.error("No tab found for:", tabTarget);
+                    return;
+                }
+                // Hide all other tabs inside this section
+                section.querySelectorAll("[data-tab-target]").forEach(content => {
+                    // content.style.display = "none";
+                    document.querySelector(`[data-tab-source="${content.dataset.tabTarget}"]`).style.display = "none";
+                });
+
+                // Remove active state from all tabs inside this container
+                tabs.forEach(t => t.classList.remove("active"));
+
+                // Show the selected tab and mark it as active
+                this.classList.add("active");
+                targetTab.style.display = "grid"; // Ensure it's displayed correctly
+            });
         });
-    });
 
-    // Set default active tab (first one)
-    if (tabs.length > 0) {
-        tabs[0].click();
+        // Auto-select first tab in this container
+        if (tabs.length > 0) {
+            tabs[0].click();
+        }
     }
+
+    // 🔥 Initialize tabs only after HTML is dynamically inserted
+    document.querySelectorAll("[data-tab-container]").forEach(setupTabs);
 });
 
 

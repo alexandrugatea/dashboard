@@ -14,6 +14,7 @@
 
         --color-error: #EF4444;
         --color-success: #22C55E;
+        --color-info: #08689B;
     }
 }
 
@@ -34,14 +35,16 @@
     }
 }
 
-$toggler: (
-    bar-height: 16,
-    bar-width: 4,
-    size: 44, // same as logo
-);
+$sidebarTogglerSize: 44;
 
+// global variable for border-radius
+$corner: 8px;
 
 $bezier: cubic-bezier(0.71, -0.26, 0.29, 1.27);
+
+$toggle: (
+
+);
 
 
 $sidebar: (

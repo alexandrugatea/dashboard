@@ -9,8 +9,15 @@ body {
     @include bodyFont();
 }
 
-// tabs
-
-[id^="tab-"] {
+.tab {
     display: none; 
+    height: 100%;
+}
+
+.valid {
+    color: var(--color-success);
+}
+
+.invalid {
+    color: var(--color-error);
 }

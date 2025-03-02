@@ -1,0 +1,50 @@
+#main {
+    padding: 20px;
+    max-height: 100vh;
+    overflow: hidden;
+
+    .tab {
+
+        &.two-columns {
+            display: grid;
+            grid-template-columns: 370px 1fr;
+        }
+    }
+
+    .mods-sidebar {
+        background: var(--sidebar-background);
+        border-radius: rem($corner * 2);
+        padding: 15px;
+        overflow: hidden;
+        height: 100%;
+    }
+    
+    .scrollable {
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .mods-settings {
+        padding: 20px;
+    }
+
+    .mods-group {
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        &.inactive {
+            ul {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .mods-group-title {
+       @include titleFont(600);
+       @include flex(row, edges, center); 
+        margin-bottom: 5px;
+    }
+}

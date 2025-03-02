@@ -1,0 +1,4 @@
+button, .button {
+    @include resetButton();
+    cursor: pointer
+}

@@ -1,10 +1,16 @@
 body {
     background: var(--page-background);
     color: var(--page-color);
-    letter-spacing: rem-calc(1);
+    letter-spacing: rem(1);
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
 
     @include bodyFont();
+}
+
+// tabs
+
+[id^="tab-"] {
+    display: none; 
 }

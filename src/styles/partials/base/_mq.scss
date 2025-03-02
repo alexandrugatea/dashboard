@@ -4,7 +4,7 @@ $global-font-size: 100% !default;
   @return ($num / ($num * 0 + 1));
 }
 
-@function rem-calc($values, $base: null) {
+@function rem($values, $base: null) {
   $rem-values: ();
   $count: length($values);
 
@@ -33,7 +33,7 @@ $global-font-size: 100% !default;
 
 @function -zf-bp-to-em($value) {
   @if unit($value) == 'px' or unitless($value) {
-    $value: rem-calc($value, $base: 16px);
+    $value: rem($value, $base: 16px);
   }
 
   @return strip-unit($value) * 1em;
@@ -41,7 +41,7 @@ $global-font-size: 100% !default;
 
 @function -zf-to-rem($value, $base: null) {
   @if type-of($value) != 'number' {
-    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+    @warn inspect($value) + ' was passed to rem(), which is not a number.';
     @return $value;
   }
 

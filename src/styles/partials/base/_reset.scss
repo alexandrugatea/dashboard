@@ -10,7 +10,14 @@
   
   a {
     color: inherit;
-    text-decoration-color: var(--accent);
+    
+    &:not(.button) {
+      text-decoration-color: var(--accent);
+    }
+
+    &.button {
+      text-decoration: none;
+    }
   }
   
   ::selection {

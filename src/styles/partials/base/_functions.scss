@@ -19,3 +19,12 @@
 
     @return null; // Return null if nothing is found
 }
+
+@function accent($alpha: 1) {
+    @return rgba(var(--accent-r), var(--accent-g), var(--accent-b), $alpha);
+}
+
+
+@function transparent($color-var, $alpha) {
+    @return unquote("color-mix(in srgb, var(#{$color-var}) #{$alpha}, transparent)");
+}

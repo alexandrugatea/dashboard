@@ -38,3 +38,9 @@
     align-items: map-get($horizontal-map, $horizontal);
   }
 }
+
+@mixin resetButton() {
+  appearance: none;
+  border: none;
+  outline: none;
+}

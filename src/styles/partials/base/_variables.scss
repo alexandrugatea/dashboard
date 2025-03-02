@@ -8,7 +8,12 @@
         --accent-b: 66;
 
         --page-background: #070707;
-        --page-color: #c7c7c7;
+        --page-color: #fefefe;
+
+        --sidebar-background: #262626;
+
+        --color-error: #EF4444;
+        --color-success: #22C55E;
     }
 }
 
@@ -23,24 +28,38 @@
 
         --page-background: #fefefe;
         --page-color: #f00;
+
+        --sidebar-background: #262626;
+
     }
 }
 
-$transitions: (
-    bezier: cubic-bezier(.41,-0.06,.54,1.15),
-    linear: linear,
-    inOut: ease-in-out,
-    in: ease-in,
-    out: ease-out
+$toggler: (
+    bar-height: 16,
+    bar-width: 4,
+    size: 44, // same as logo
 );
 
+
+$bezier: cubic-bezier(0.71, -0.26, 0.29, 1.27);
+
+
 $sidebar: (
+    gap: 40,
+
     expanded: (
         width: 250,
-        padding: 20,
+        padding: 30 10 20 10,
     ),
     collapsed: (
-        width: 50,
-        padding: 10,
+        width: 100,
+        padding: 30 10 10 10,
+    ),
+
+    item: (
+        padding: 15 20,
+        height: 50,
+        collapsedHeight: 60,
+        gap: 16,
     )
-)
+);

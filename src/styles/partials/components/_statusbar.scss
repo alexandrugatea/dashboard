@@ -1,3 +1,39 @@
 #statusBar {
+    @include titleFont(600);
     @include flex(row, right, center);
+    background: transparent(--sidebar-background, 50%);
+    padding-right: 20px;
+
+    > .label {
+        @include flex(row, right, center);
+        margin-right: 20px;
+        gap: 10px;
+    }
+
+    ul {
+        @include flex(row, right, center);
+
+        li {
+
+            &:not(:last-child) {
+                margin-right: 20px;
+                padding-right: 20px;
+                border-right: 1px solid var(--page-color);
+            }
+        }
+    }
+
+    .valid {
+        color: var(--color-success);
+    }
+
+    .invalid {
+        color: var(--color-error);
+    }
+
+    .purchase {
+        background: var(--color-success);
+        padding: 4px 10px;
+        border-radius: 8px;
+    }
 }

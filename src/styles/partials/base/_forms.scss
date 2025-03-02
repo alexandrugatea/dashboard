@@ -1,13 +1,22 @@
 .toggle-option {
     position: relative;
-    min-height: 44px;
-    @include flex(row, left, center);
-    padding: 12px 0;
-    gap: 12px;
+    // min-height: 50px;
+    @include flex(row, left, top);
+    padding: 15px 10px;
+    gap: 8px;
     @include titleFont(600);
     font-size: 18px;
+
     &:not(:last-child) {
-        border-bottom: 1px solid transparent(--page-color, 10%);
+        margin-top: -2px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent(--page-color, 10%);
+    }
+
+    &:has(button.active) {
+        border-top: 2px solid var(--color-success);
+        border-bottom: 2px solid var(--color-success);
+        background: transparent(--color-success, 20%);
     }
 
     button {
@@ -17,6 +26,27 @@
         text-align: left;
         flex: 1 1 auto;
         letter-spacing: 0.6px;
+        line-height: 22px;
+        padding-right: 16px;
+
+        &:after {
+            @include icon("\e924", 16);
+            position: absolute;
+            top: 50%;
+            transform: translate(-5px, -50%);
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.15s linear, transform 0.25s $bezier;
+        }
+
+        &.active {
+
+            &::after {
+                color: var(--color-success);
+                transform: translate(0, -50%);
+                opacity: 1;
+            }
+        }
     }
 
     input {
@@ -36,7 +66,7 @@
         &:after {
             left: 15px;
             background-color: var(--color-success);
-            background-image: radial-gradient(circle at 65% 30%, #ceff7e 20%, #a3e635);
+            background-image: radial-gradient(circle at 65% 30%, #ceff7e 20%, var(--color-success));
             opacity: 1;
             transition: all 0.35s $bezier;
         }
@@ -72,10 +102,10 @@
             height: 22px;
             border-radius: 15px;
             box-shadow: inset 0 0 0 2px black;
-            background: #171717;
+            background: var(--page-background);
             transition: all 0.35s cubic-bezier(0.97, -0.37, 0.2, 1.33);
 
-            background: radial-gradient(circle, #57534e 60%, transparent 70%);
+            background: radial-gradient(circle, transparent(--page-color, 20%) 60%, transparent 70%);
             background-size: 16px 16px;
             background-position: 3px center;
             background-repeat: no-repeat;
@@ -90,12 +120,12 @@
             width: 16px;
             height: 16px;
             border-radius: 16px;
-            background-color: #57534e;
+            background-color: transparent(--page-color, 20%);
             // background-image: radial-gradient(circle at 65% 30%, #57534e 20%, #57534e);
             position: absolute;
             left: 3px;
             transition: all 0.35s cubic-bezier(0.97, -0.37, 0.2, 1.33);
-            box-shadow: 0 0 7px 3px rgba(#a3e635, 44%), 0 4px 4px 0 rgba(#000000, 0.25),
+            box-shadow: 0 0 7px 3px rgba(#a3e635, 0.44), 0 4px 4px 0 rgba(#000000, 0.25),
                 0 0 2px 0 rgba(#fff, 0.25), inset 1px -1px 2px 1px rgba(#000, 0.43),
                 inset -3px 2px 3px 2px rgba(#fff, 0.20);
             opacity: 0;
@@ -103,13 +133,12 @@
         }
 
         .option-state {
-            display: flex;
-            flex-direction: column;
+            @include flex(column, center, top);
             height: 22px;
             line-height: 22px;
             overflow: hidden;
             font-weight: bold;
-            color: #57534e;
+            color: transparent(--page-color, 20%);
             position: relative;
             flex-shrink: 0;
 
@@ -119,7 +148,7 @@
                 transition: all 0.45s cubic-bezier(0.97, -0.37, 0.2, 1.33);
 
                 &:first-of-type {
-                    color: #a3e635;
+                    color: var(--color-success);
                 }
             }
         }
@@ -130,15 +159,23 @@
 
 
 .tooltip {
-    @include flex(row, center, center);
     flex-shrink: 0;
     color: var(--page-color);
+    background: var(--color-info);
+    border-radius: 50%;
+    position: relative;
+    width: 22px;
+    height: 22px;
 
     .icon {
-        border-radius: 50%;
-        background: var(--color-info);
         pointer-events: none;
-        box-shadow: 0 0 0 3px var(--color-info);
-        width: 20px;
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

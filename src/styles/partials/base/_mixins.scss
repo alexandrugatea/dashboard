@@ -44,3 +44,44 @@
   border: none;
   outline: none;
 }
+
+@mixin scrollbar() {
+
+  &::-webkit-scrollbar {
+    width: get($scrollbar, thickness);
+    height: get($scrollbar, thickness);
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    transition: all 0.25s linear;
+    box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--page-color, 30%);
+  }
+  
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    // background: var(--color-success);
+    box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--color-success, 80%);
+  }
+}
+
+@mixin icon($icon: "", $size: 16) {
+  content: $icon;
+  font-family: 'baitIcons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: rem($size);
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -21,3 +21,26 @@ body {
 .invalid {
     color: var(--color-error);
 }
+
+sup {
+    position: relative;
+    top: 4px;
+    line-height: 8px;
+}
+
+.purchase {
+    background: var(--color-success);
+    padding: 4px 10px;
+    border-radius: 8px;
+    @include flex(row, center, center, inline);
+    color: #000;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0;
+
+    &.small {
+        padding: 2px 4px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

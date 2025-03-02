@@ -1,7 +1,7 @@
 // import GoogleFonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Titillium+Web:wght@400;600;700&display=swap');
 
-@mixin tileFont($weight: 400) {
+@mixin titleFont($weight: 400) {
     font-family: "Titillium Web", courier;
     font-style: normal;
     font-weight: $weight;
@@ -13,3 +13,29 @@
     font-weight: $weight;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'baitIcons';
+    src:  url('../fonts/baitIcons.eot?dr4eox');
+    src:  url('../fonts/baitIcons.eot?dr4eox#iefix') format('embedded-opentype'),
+      url('../fonts/baitIcons.ttf?dr4eox') format('truetype'),
+      url('../fonts/baitIcons.woff?dr4eox') format('woff'),
+      url('../fonts/baitIcons.svg?dr4eox#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'baitIcons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

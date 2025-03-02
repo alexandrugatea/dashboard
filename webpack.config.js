@@ -97,6 +97,13 @@ module.exports = (env) => {
 					],
 				},
 				{
+					test: /\.(woff(2)?|eot|ttf|otf)$/,
+					type: 'asset/resource',
+					generator: {
+					  filename: 'fonts/[name][ext]'
+					}
+				},
+				{
 					test: /\.(png|jpe?g|gif|svg|webp)$/i,
 					type: 'asset/resource',
 					generator: {
@@ -113,8 +120,17 @@ module.exports = (env) => {
 			new CleanWebpackPlugin(),
 			new HtmlWebpackPlugin({
 				template: './src/index.html',
+				filename: 'index.html',
 				minify: isProd,
-			}),
+			  }),
+			  ...(isProd
+				? []
+				: [
+					new HtmlWebpackPlugin({
+					  template: './src/icons.html',
+					  filename: 'icons.html',
+					}),
+				  ]),
 			new MiniCssExtractPlugin({ filename: 'styles.css' }),
 			...(isProd ? [
 				new HtmlInlineCSSWebpackPlugin(),
@@ -124,7 +140,8 @@ module.exports = (env) => {
 				? [
 						new CopyWebpackPlugin({
 							patterns: [
-								{ from: imagesPath, to: path.join(buildPath, 'images'), force: true },
+								{ from: path.join(srcPath, 'images'), to: path.join(buildPath, 'images'), force: true },
+								{ from: path.join(srcPath, 'fonts'), to: path.join(buildPath, 'fonts'), force: true },
 							],
 						}),
 				  ]

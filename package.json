@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "webpack serve --config webpack.config.js --env mode=development",
 		"build": "webpack --config webpack.config.js --env mode=production",
-		"clear": "rm -rf build node_modules package-lock.json"
+		"clear": "rm -rf build node_modules package-lock.json",
+		"format": "prettier --write \"src/**/*.{js,scss,html,json}\""
 	},
 	"author": "Alexandru Gatea",
 	"license": "ISC",

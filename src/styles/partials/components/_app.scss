@@ -1,29 +1,29 @@
 #app {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: rem(get($sidebar, expanded, width)) auto;
-    grid-template-rows: 1fr 50px; // 50px for statusbar
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: rem(get($sidebar, expanded, width)) auto;
+	grid-template-rows: 1fr 50px; // 50px for statusbar
 
-    grid-template-areas: 
-    "sidebar main"
-    "sidebar statusbar";
-    transition: grid-template-columns 0.25s $bezier;
+	grid-template-areas:
+		'sidebar main'
+		'sidebar statusbar';
+	transition: grid-template-columns 0.25s $bezier;
 
-    &.collapsed {
-        grid-template-columns:  rem(get($sidebar, collapsed, width)) auto;
-    }
+	&.collapsed {
+		grid-template-columns: rem(get($sidebar, collapsed, width)) auto;
+	}
 }
 
 #sideBar {
-    grid-area: sidebar;
+	grid-area: sidebar;
 }
 
 #statusBar {
-    grid-area: statusbar;
+	grid-area: statusbar;
 }
 
 #main {
-    grid-area: main;
+	grid-area: main;
 }

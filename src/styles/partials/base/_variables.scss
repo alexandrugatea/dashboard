@@ -1,38 +1,37 @@
 @media (prefers-color-scheme: dark) {
-    :root {
-        --accent: #fc4242;
-    
-        // accents rgb must match the accent's hex
-        --accent-r: 252;
-        --accent-g: 66;
-        --accent-b: 66;
+	:root {
+		--accent: #fc4242;
 
-        --page-background: #070707;
-        --page-color: #fefefe;
+		// accents rgb must match the accent's hex
+		--accent-r: 252;
+		--accent-g: 66;
+		--accent-b: 66;
 
-        --sidebar-background: #262626;
+		--page-background: #070707;
+		--page-color: #fefefe;
 
-        --color-error: #EF4444;
-        --color-success: #A3E635;
-        --color-info: #08689B;
-    }
+		--sidebar-background: #262626;
+
+		--color-error: #ef4444;
+		--color-success: #a3e635;
+		--color-info: #08689b;
+	}
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --accent: #fc4242;
-    
-        // accents rgb must match the accent's hex
-        --accent-r: 252;
-        --accent-g: 66;
-        --accent-b: 66;
+	:root {
+		--accent: #fc4242;
 
-        --page-background: #fefefe;
-        --page-color: #f00;
+		// accents rgb must match the accent's hex
+		--accent-r: 252;
+		--accent-g: 66;
+		--accent-b: 66;
 
-        --sidebar-background: #262626;
+		--page-background: #fefefe;
+		--page-color: #f00;
 
-    }
+		--sidebar-background: #262626;
+	}
 }
 
 $sidebarTogglerSize: 44;
@@ -42,33 +41,30 @@ $corner: 8px;
 
 $bezier: cubic-bezier(0.71, -0.26, 0.29, 1.27);
 
-$toggle: (
-
-);
-
+$toggle: ();
 
 $sidebar: (
-    gap: 40,
+	gap: 40,
 
-    expanded: (
-        width: 250,
-        padding: 30 10 20 10,
-    ),
-    collapsed: (
-        width: 100,
-        padding: 30 10 10 10,
-    ),
+	expanded: (
+		width: 250,
+		padding: 30 10 20 10,
+	),
+	collapsed: (
+		width: 100,
+		padding: 30 10 10 10,
+	),
 
-    item: (
-        padding: 15 20,
-        height: 50,
-        collapsedHeight: 60,
-        gap: 16,
-    )
+	item: (
+		padding: 15 20,
+		height: 50,
+		collapsedHeight: 60,
+		gap: 16,
+	),
 );
 
 $scrollbar: (
-    thickness: 7px,
-    track: #000,
-    thumb: #ccc,
+	thickness: 7px,
+	track: #000,
+	thumb: #ccc,
 );

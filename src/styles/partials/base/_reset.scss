@@ -1,33 +1,34 @@
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  ul, ul li {
-    list-style: none;
-  }
-  
-  a {
-    color: inherit;
-    
-    &:not(.button) {
-      text-decoration-color: var(--accent);
-    }
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-    &.button {
-      text-decoration: none;
-    }
-  }
-  
-  ::selection {
-    background: var(--accent);
-    color: var(--page-color);
+ul,
+ul li {
+	list-style: none;
+}
 
-    
-  }
-  
-  img {
-      display: block;
-      max-width: 100%;
-  }
+a {
+	color: inherit;
+
+	&:not(.button) {
+		text-decoration-color: var(--accent);
+	}
+
+	&.button {
+		text-decoration: none;
+	}
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--page-color);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}

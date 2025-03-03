@@ -1,30 +1,29 @@
 @function get($map, $key1, $key2: null) {
-    @if map-has-key($map, $key1) {
-        $value: map-get($map, $key1);
+	@if map-has-key($map, $key1) {
+		$value: map-get($map, $key1);
 
-        // If second key is provided and the first value is a map, retrieve from sub-map
-        @if ($key2 != null and type-of($value) == "map") {
-            @if map-has-key($value, $key2) {
-                @return map-get($value, $key2);
-            } @else {
-                @warn "Property `#{$key2}` not found in `#{$key1}`.";
-            }
-        } @else if ($key2 == null) {
-            // If only one key is provided, return the direct value
-            @return $value;
-        }
-    } @else {
-        @warn "Key `#{$key1}` not found in map.";
-    }
+		// If second key is provided and the first value is a map, retrieve from sub-map
+		@if ($key2 != null and type-of($value) == 'map') {
+			@if map-has-key($value, $key2) {
+				@return map-get($value, $key2);
+			} @else {
+				@warn "Property `#{$key2}` not found in `#{$key1}`.";
+			}
+		} @else if ($key2 == null) {
+			// If only one key is provided, return the direct value
+			@return $value;
+		}
+	} @else {
+		@warn "Key `#{$key1}` not found in map.";
+	}
 
-    @return null; // Return null if nothing is found
+	@return null; // Return null if nothing is found
 }
 
 @function accent($alpha: 1) {
-    @return rgba(var(--accent-r), var(--accent-g), var(--accent-b), $alpha);
+	@return rgba(var(--accent-r), var(--accent-g), var(--accent-b), $alpha);
 }
 
-
 @function transparent($color-var, $alpha) {
-    @return unquote("color-mix(in srgb, var(#{$color-var}) #{$alpha}, transparent)");
+	@return unquote('color-mix(in srgb, var(#{$color-var}) #{$alpha}, transparent)');
 }

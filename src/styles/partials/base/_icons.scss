@@ -1,199 +1,199 @@
 @font-face {
-  font-family: 'baitIcons';
-  src: url('../fonts/baitIcons.eot?dr4eox');
-  src: url('../fonts/baitIcons.eot?dr4eox#iefix') format('embedded-opentype'),
-    url('../fonts/baitIcons.ttf?dr4eox') format('truetype'),
-    url('../fonts/baitIcons.woff?dr4eox') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: 'baitIcons';
+	src: url('../fonts/baitIcons.eot?dr4eox');
+	src:
+		url('../fonts/baitIcons.eot?dr4eox#iefix') format('embedded-opentype'),
+		url('../fonts/baitIcons.ttf?dr4eox') format('truetype'),
+		url('../fonts/baitIcons.woff?dr4eox') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'baitIcons' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 20px;
+[class^='icon-'],
+[class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'baitIcons' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 20px;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
-
 
 .icon-activity:before {
-  content: "\e920";
+	content: '\e920';
 }
 
 .icon-alert-circle:before {
-  content: "\e921";
+	content: '\e921';
 }
 
 .icon-arrow-down:before {
-  content: "\e900";
+	content: '\e900';
 }
 
 .icon-arrow-left:before {
-  content: "\e901";
+	content: '\e901';
 }
 
 .icon-arrow-right:before {
-  content: "\e902";
+	content: '\e902';
 }
 
 .icon-arrow-up:before {
-  content: "\e903";
+	content: '\e903';
 }
 
 .icon-box:before {
-  content: "\e904";
+	content: '\e904';
 }
 
 .icon-check:before {
-  content: "\e905";
+	content: '\e905';
 }
 
 .icon-chevron-down:before {
-  content: "\e906";
+	content: '\e906';
 }
 
 .icon-chevron-left:before {
-  content: "\e907";
+	content: '\e907';
 }
 
 .icon-chevron-right:before {
-  content: "\e908";
+	content: '\e908';
 }
 
 .icon-chevron-up:before {
-  content: "\e909";
+	content: '\e909';
 }
 
 .icon-chevrons-down:before {
-  content: "\e90a";
+	content: '\e90a';
 }
 
 .icon-chevrons-left:before {
-  content: "\e90b";
+	content: '\e90b';
 }
 
 .icon-chevrons-right:before {
-  content: "\e90c";
+	content: '\e90c';
 }
 
 .icon-chevrons-up:before {
-  content: "\e90d";
+	content: '\e90d';
 }
 
 .icon-circle:before {
-  content: "\e91c";
+	content: '\e91c';
 }
 
 .icon-credit-card:before {
-  content: "\e922";
+	content: '\e922';
 }
 
 .icon-crosshair:before {
-  content: "\e90e";
+	content: '\e90e';
 }
 
 .icon-download-cloud:before {
-  content: "\e923";
+	content: '\e923';
 }
 
 .icon-heart:before {
-  content: "\e90f";
+	content: '\e90f';
 }
 
 .icon-help-circle:before {
-  content: "\e910";
+	content: '\e910';
 }
 
 .icon-info:before {
-  content: "\e911";
+	content: '\e911';
 }
 
 .icon-key:before {
-  content: "\e912";
+	content: '\e912';
 }
 
 .icon-layers:before {
-  content: "\e91d";
+	content: '\e91d';
 }
 
 .icon-message-square:before {
-  content: "\e913";
+	content: '\e913';
 }
 
 .icon-minus:before {
-  content: "\e914";
+	content: '\e914';
 }
 
 .icon-monitor:before {
-  content: "\e915";
+	content: '\e915';
 }
 
 .icon-moon:before {
-  content: "\e916";
+	content: '\e916';
 }
 
 .icon-package:before {
-  content: "\e91e";
+	content: '\e91e';
 }
 
 .icon-play:before {
-  content: "\e924";
+	content: '\e924';
 }
 
 .icon-plus:before {
-  content: "\e917";
+	content: '\e917';
 }
 
 .icon-power:before {
-  content: "\e91f";
+	content: '\e91f';
 }
 
 .icon-save:before {
-  content: "\e925";
+	content: '\e925';
 }
 
 .icon-settings:before {
-  content: "\e918";
+	content: '\e918';
 }
 
 .icon-sliders:before {
-  content: "\e919";
+	content: '\e919';
 }
 
 .icon-sun:before {
-  content: "\e91a";
+	content: '\e91a';
 }
 
 .icon-trash:before {
-  content: "\e926";
+	content: '\e926';
 }
 
 .icon-trash-2:before {
-  content: "\e927";
+	content: '\e927';
 }
 
 .icon-upload-cloud:before {
-  content: "\e928";
+	content: '\e928';
 }
 
 .icon-x:before {
-  content: "\e929";
+	content: '\e929';
 }
 
 .icon-zap:before {
-  content: "\e91b";
+	content: '\e91b';
 }
 
 .icon-language:before {
-  content: "\e92a";
+	content: '\e92a';
 }

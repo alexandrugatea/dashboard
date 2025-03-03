@@ -1,87 +1,85 @@
 @mixin flex($direction: row, $horizontal: center, $vertical: center, $inline: false, $wrap: false) {
-  $display: flex;
-  @if $inline == true or $inline == inline {
-    $display: inline-flex;
-  }
+	$display: flex;
+	@if $inline == true or $inline == inline {
+		$display: inline-flex;
+	}
 
-  display: $display;
-  flex-direction: $direction;
+	display: $display;
+	flex-direction: $direction;
 
-  $horizontal-map: (
-    left: flex-start,
-    center: center,
-    right: flex-end,
-    edges: space-between,
-    even: space-evenly,
-    full: stretch
-  );
+	$horizontal-map: (
+		left: flex-start,
+		center: center,
+		right: flex-end,
+		edges: space-between,
+		even: space-evenly,
+		full: stretch,
+	);
 
-  $vertical-map: (
-    top: flex-start,
-    center: center,
-    bottom: flex-end,
-    edges: space-between,
-    even: space-evenly,
-    full: stretch
-  );
+	$vertical-map: (
+		top: flex-start,
+		center: center,
+		bottom: flex-end,
+		edges: space-between,
+		even: space-evenly,
+		full: stretch,
+	);
 
-  @if $wrap == wrap or $wrap == true {
-    flex-wrap: wrap;
-  }
+	@if $wrap == wrap or $wrap == true {
+		flex-wrap: wrap;
+	}
 
-  @if ($direction == row) {
-    justify-content: map-get($horizontal-map, $horizontal);
-    align-items: map-get($vertical-map, $vertical);
-  } 
-  @else if ($direction == column) {
-    justify-content: map-get($vertical-map, $vertical);
-    align-items: map-get($horizontal-map, $horizontal);
-  }
+	@if ($direction == row) {
+		justify-content: map-get($horizontal-map, $horizontal);
+		align-items: map-get($vertical-map, $vertical);
+	} @else if ($direction == column) {
+		justify-content: map-get($vertical-map, $vertical);
+		align-items: map-get($horizontal-map, $horizontal);
+	}
 }
 
 @mixin resetButton() {
-  appearance: none;
-  border: none;
-  outline: none;
+	appearance: none;
+	border: none;
+	outline: none;
 }
 
 @mixin scrollbar() {
+	&::-webkit-scrollbar {
+		width: get($scrollbar, thickness);
+		height: get($scrollbar, thickness);
+	}
 
-  &::-webkit-scrollbar {
-    width: get($scrollbar, thickness);
-    height: get($scrollbar, thickness);
-  }
-  
-  /* Track */
-  &::-webkit-scrollbar-track {
-    background: #000;
-  }
-  
-  /* Handle */
-  &::-webkit-scrollbar-thumb {
-    background: transparent;
-    transition: all 0.25s linear;
-    box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--page-color, 30%);
-  }
-  
-  /* Handle on hover */
-  &::-webkit-scrollbar-thumb:hover {
-    // background: var(--color-success);
-    box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--color-success, 80%);
-  }
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #000;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: transparent;
+		transition: all 0.25s linear;
+		box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--page-color, 30%);
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		// background: var(--color-success);
+		box-shadow: inset 0 0 0 get($scrollbar, thickness) transparent(--color-success, 80%);
+	}
 }
 
-@mixin icon($icon: "", $size: 16) {
-  content: $icon;
-  font-family: 'baitIcons' !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: rem($size);
+@mixin icon($icon: '', $size: 16) {
+	content: $icon;
+	font-family: 'baitIcons' !important;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: rem($size);
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }

@@ -1,52 +1,50 @@
 #main {
-    padding: 20px;
-    max-height: 100vh;
-    overflow: hidden;
+	padding: 20px;
+	max-height: 100vh;
+	overflow: hidden;
 
-    .tab {
+	.tab {
+		&.two-columns {
+			display: grid;
+			grid-template-columns: 400px 1fr;
+		}
+	}
 
-        &.two-columns {
-            display: grid;
-            grid-template-columns: 400px 1fr;
-        }
-    }
+	.mods-sidebar {
+		background: var(--sidebar-background);
+		border-radius: rem($corner * 2);
+		padding: 15px;
+		overflow: hidden;
+		height: 100%;
+	}
 
-    .mods-sidebar {
-        background: var(--sidebar-background);
-        border-radius: rem($corner * 2);
-        padding: 15px;
-        overflow: hidden;
-        height: 100%;
-    }
-    
-    .scrollable {
-        max-height: 100%;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding-right: 10px;
-        @include scrollbar();
-    }
+	.scrollable {
+		max-height: 100%;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 10px;
+		@include scrollbar();
+	}
 
-    .mods-settings {
-        padding: 20px;
-    }
+	.mods-settings {
+		padding: 20px;
+	}
 
-    .mods-group {
+	.mods-group {
+		&:not(:last-child) {
+			margin-bottom: 50px;
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 50px;
-        }
+		&.inactive {
+			ul {
+				opacity: 0.5;
+			}
+		}
+	}
 
-        &.inactive {
-            ul {
-                opacity: 0.5;
-            }
-        }
-    }
-
-    .mods-group-title {
-       @include titleFont(600);
-       @include flex(row, edges, center); 
-        margin-bottom: 12px;
-    }
+	.mods-group-title {
+		@include titleFont(600);
+		@include flex(row, edges, center);
+		margin-bottom: 12px;
+	}
 }

@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Titillium+Web:wght@400;600;700&display=swap');
 
 @mixin titleFont($weight: 400) {
-    font-family: "Titillium Web", courier;
-    font-style: normal;
-    font-weight: $weight;
+	font-family: 'Titillium Web', courier;
+	font-style: normal;
+	font-weight: $weight;
 }
 
 @mixin bodyFont($weight: 400) {
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: $weight;
-    font-style: normal;
+	font-family: 'Roboto Slab', serif;
+	font-optical-sizing: auto;
+	font-weight: $weight;
+	font-style: normal;
 }

@@ -1,46 +1,46 @@
 body {
-    background: var(--page-background);
-    color: var(--page-color);
-    letter-spacing: rem(1);
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
+	background: var(--page-background);
+	color: var(--page-color);
+	letter-spacing: rem(1);
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
 
-    @include bodyFont();
+	@include bodyFont();
 }
 
 .tab {
-    display: none; 
-    height: 100%;
+	display: none;
+	height: 100%;
 }
 
 .valid {
-    color: var(--color-success);
+	color: var(--color-success);
 }
 
 .invalid {
-    color: var(--color-error);
+	color: var(--color-error);
 }
 
 sup {
-    position: relative;
-    top: 4px;
-    line-height: 8px;
+	position: relative;
+	top: 4px;
+	line-height: 8px;
 }
 
 .purchase {
-    background: var(--color-success);
-    padding: 4px 10px;
-    border-radius: 8px;
-    @include flex(row, center, center, inline);
-    color: #000;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 0;
+	background: var(--color-success);
+	padding: 4px 10px;
+	border-radius: 8px;
+	@include flex(row, center, center, inline);
+	color: #000;
+	font-size: 14px;
+	font-weight: 800;
+	letter-spacing: 0;
 
-    &.small {
-        padding: 2px 4px;
-        font-size: 12px;
-        line-height: 14px;
-    }
+	&.small {
+		padding: 2px 4px;
+		font-size: 12px;
+		line-height: 14px;
+	}
 }

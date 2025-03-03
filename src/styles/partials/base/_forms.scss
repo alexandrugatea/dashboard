@@ -6,12 +6,9 @@
     gap: 8px;
     @include titleFont(600);
     font-size: 18px;
-
-    &:not(:last-child) {
-        margin-top: -2px;
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent(--page-color, 10%);
-    }
+    margin-top: -2px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent(--page-color, 10%);
 
     &:has(button.active) {
         border-top: 2px solid var(--color-success);

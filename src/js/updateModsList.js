@@ -1,4 +1,4 @@
-export function populateScrollable(modGroups) {
+export function populateModsList(modGroups, statusData) {
 	const scrollable = document.querySelector('.mods-sidebar .scrollable');
 	if (!scrollable) {
 		console.error('Scrollable container not found.');
@@ -22,6 +22,7 @@ export function populateScrollable(modGroups) {
 			const listItem = document.createElement('li');
 			listItem.className = 'toggle-option';
 
+			// Strip prefixes "b4it -" or "b4it :"
 			const displayName = mod.template.modDisplayName
 				? mod.template.modDisplayName.replace(/^[^-:]+ [-:] /, '')
 				: mod.name;
@@ -40,8 +41,12 @@ export function populateScrollable(modGroups) {
 		return container;
 	}
 
+	// Determine if Pack II should be inactive
+	const packIIClass = statusData.pack2_paid ? '' : 'inactive';
+
+	// Append mod groups with the correct class
 	if (modGroups.packII.length) {
-		scrollable.appendChild(createModGroup('Pack II settings', 'inactive', modGroups.packII));
+		scrollable.appendChild(createModGroup('Pack II settings', packIIClass, modGroups.packII));
 	}
 
 	if (modGroups.bait.length) {
@@ -51,26 +56,20 @@ export function populateScrollable(modGroups) {
 
 export function updateStatusUI(statusData) {
 	document.querySelectorAll('.mods-group-title').forEach((title) => {
+		const statusElement = title.querySelector('.status');
+
+		if (!statusElement) return;
+
 		if (title.innerText.includes('Pack II')) {
-			const statusElement = title.querySelector('.status');
-			if (statusElement) {
-				if (statusData.pack2_paid) {
-					statusElement.innerHTML = `<span class="status valid">${statusData.pack2_date}</span>`;
-				} else {
-					statusElement.innerHTML = `<span class="status invalid">Inactive <a href="!#" class="button purchase small">Get a code</a></span>`;
-				}
-			}
+			statusElement.innerHTML = statusData.pack2_paid
+				? `<span class="status valid">${statusData.pack2_date}</span>`
+				: `<span class="status invalid">Inactive <a href="!#" class="button purchase small">Get a code</a></span>`;
 		}
 
 		if (title.innerText.includes('Bait')) {
-			const statusElement = title.querySelector('.status');
-			if (statusElement) {
-				if (statusData.bait_paid) {
-					statusElement.innerHTML = `<span class="status valid">${statusData.bait_date}</span>`;
-				} else {
-					statusElement.innerHTML = `<span class="status invalid">Inactive <a href="!#" class="button purchase small">Get a code</a></span>`;
-				}
-			}
+			statusElement.innerHTML = statusData.bait_paid
+				? `<span class="status valid">${statusData.bait_date}</span>`
+				: `<span class="status invalid">Inactive <a href="!#" class="button purchase small">Get a code</a></span>`;
 		}
 	});
 }

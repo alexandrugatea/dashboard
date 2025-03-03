@@ -1,8 +1,8 @@
 import '../styles/style.scss'; // Webpack SCSS compilation
 
 import { fetchConfig, fetchStatus } from './api.js';
-import { processModList } from './modList.js';
-import { populateScrollable, updateStatusUI } from './updateUI.js';
+import { filterModList, processModList } from './modList.js';
+import { populateModsList, updateStatusUI } from './updateModsList.js';
 import { setupTabs } from './tabs.js';
 import { setupSidebar } from './sidebar.js';
 import { updateStatusBar } from './statusbar.js';
@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 	await new Promise((resolve) => setTimeout(resolve, 0));
 
 	setupSidebar(sidebarContainer);
+	const statusData = await fetchStatus();
 
 	const configData = await fetchConfig();
 	if (configData) {
-		populateScrollable(processModList(configData));
+		populateModsList(filterModList(configData), statusData);
 	}
 
-	const statusData = await fetchStatus();
 	if (statusData) {
 		updateStatusUI(statusData);
 		updateStatusBar(statusData);

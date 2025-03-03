@@ -43,8 +43,14 @@
 	}
 
 	.mods-group-title {
-		@include titleFont(600);
+		@include titleFont(800);
 		@include flex(row, edges, center);
 		margin-bottom: 12px;
+		font-size: rem(20);
+		letter-spacing: 0;
+
+		.status {
+			font-size: rem(16);
+		}
 	}
 }

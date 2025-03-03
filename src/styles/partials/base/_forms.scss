@@ -5,7 +5,7 @@
 	padding: 15px 10px;
 	gap: 8px;
 	@include titleFont(600);
-	font-size: 18px;
+	font-size: 15px;
 	margin-top: -2px;
 	border-top: 2px solid transparent;
 	border-bottom: 2px solid transparent(--page-color, 10%);
@@ -25,6 +25,7 @@
 		letter-spacing: 0.6px;
 		line-height: 22px;
 		padding-right: 16px;
+		text-transform: capitalize;
 
 		&:after {
 			@include icon('\e924', 16);
@@ -102,11 +103,7 @@
 			background: var(--page-background);
 			transition: all 0.35s cubic-bezier(0.97, -0.37, 0.2, 1.33);
 
-			background: radial-gradient(
-				circle,
-				transparent(--page-color, 20%) 60%,
-				transparent 70%
-			);
+			background: radial-gradient(circle, transparent(--page-color, 20%) 60%, transparent 70%);
 			background-size: 16px 16px;
 			background-position: 3px center;
 			background-repeat: no-repeat;

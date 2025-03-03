@@ -1,4 +1,11 @@
-import '../styles/style.scss'; // Import SCSS styles for Webpack compiling into CSS
+import '../styles/style.scss'; // Webpack SCSS compilation
+
+import { fetchConfig, fetchStatus } from './api.js';
+import { processModList } from './modList.js';
+import { populateScrollable, updateStatusUI } from './updateUI.js';
+import { setupTabs } from './tabs.js';
+import { setupSidebar } from './sidebar.js';
+import { updateStatusBar } from './statusbar.js';
 
 // Import HTML components
 import sideBar from '../components/sidebar.html';
@@ -23,61 +30,18 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 	await new Promise((resolve) => setTimeout(resolve, 0));
 
-	const sideBarToggler = sidebarContainer.querySelector('#sidebarToggler');
+	setupSidebar(sidebarContainer);
 
-	if (!sideBarToggler) {
-		console.error('Sidebar toggler button not found inside sidebar.html');
-		return;
+	const configData = await fetchConfig();
+	if (configData) {
+		populateScrollable(processModList(configData));
 	}
 
-	sideBarToggler.addEventListener('click', toggleSideBar);
-
-	function toggleSideBar() {
-		const sidebarStatus = sidebarContainer.getAttribute('aria-expanded') === 'true';
-		sidebarContainer.setAttribute('aria-expanded', !sidebarStatus);
-		app.classList.toggle('collapsed');
-		sideBarToggler.classList.toggle('collapsed');
+	const statusData = await fetchStatus();
+	if (statusData) {
+		updateStatusUI(statusData);
+		updateStatusBar(statusData);
 	}
 
-	function setupTabs(container) {
-		if (!container) return;
-
-		const tabs = container.querySelectorAll('[data-tab-target]');
-		console.log(tabs);
-
-		tabs.forEach((tab) => {
-			tab.addEventListener('click', function (e) {
-				const tabTarget = this.dataset.tabTarget; // Get target name
-				const section = this.closest('[data-tab-container]');
-				const targetTab = document.querySelector(`[data-tab-source="${tabTarget}"]`);
-
-				if (!targetTab) {
-					console.error('No tab found for:', tabTarget);
-					return;
-				}
-				// Hide all other tabs inside this section
-				section.querySelectorAll('[data-tab-target]').forEach((content) => {
-					// content.style.display = "none";
-					document.querySelector(
-						`[data-tab-source="${content.dataset.tabTarget}"]`
-					).style.display = 'none';
-				});
-
-				// Remove active state from all tabs inside this container
-				tabs.forEach((t) => t.classList.remove('active'));
-
-				// Show the selected tab and mark it as active
-				this.classList.add('active');
-				targetTab.style.display = 'grid'; // Ensure it's displayed correctly
-			});
-		});
-
-		// Auto-select first tab in this container
-		if (tabs.length > 0) {
-			tabs[0].click();
-		}
-	}
-
-	// 🔥 Initialize tabs only after HTML is dynamically inserted
 	document.querySelectorAll('[data-tab-container]').forEach(setupTabs);
 });

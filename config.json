@@ -1,0 +1,3393 @@
+[
+    {
+      "values": {
+        "showCrewCommander": true,
+        "colorDriver": "#008000",
+        "alphaDriver": 70,
+        "alphaEngine": 70,
+        "showMode": 4,
+        "showCrewGunner": true,
+        "colorCommander": "#000080",
+        "showDevicesFuelTank": true,
+        "chameleonMode": 2,
+        "colorEngine": "#FF0000",
+        "showDevicesEngine": true,
+        "buttonChameleonMode": [43],
+        "colorTracks": "#0000FF",
+        "colorAmmoBay": "#FF8000",
+        "magneticAngle": 15,
+        "showCrewLoader": true,
+        "alphaCommander": 70,
+        "alphaFuelTank": 70,
+        "alphaGunner": 70,
+        "colorLoader": "#FF8080",
+        "colorFuelTank": "#0080FF",
+        "showTracks": false,
+        "enabled": true,
+        "alphaAmmoBay": 70,
+        "colorGunner": "#FF00FF",
+        "buttonShowMode": [82],
+        "showDevicesAmmoBay": true,
+        "alphaTracks": 70,
+        "version": 3707,
+        "showCrewDriver": true,
+        "alphaLoader": 70
+      },
+      "name": "bait.chameleonPlus",
+      "template": {
+        "column1": [
+          {
+            "width": 200,
+            "text": "Mode",
+            "tooltip": "",
+            "varName": "showMode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003EDisabled\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003EAll enemy's\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EIn focus\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EIn focus(sniper)\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EIn visible degree\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EIn visible degree(sniper)\u003C/font\u003E"
+              }
+            ],
+            "value": 4
+          },
+          {
+            "width": 200,
+            "text": "Visual style",
+            "tooltip": "",
+            "varName": "chameleonMode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EClassic Chameleon\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EDynamic armor bounce\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDynamic armor hit\u003C/font\u003E"
+              }
+            ],
+            "value": 2
+          },
+          {
+            "varName": "showCrewCommander",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy crew's\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy commander"
+          },
+          {
+            "varName": "showCrewDriver",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy crew's\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy driver"
+          },
+          {
+            "varName": "showCrewGunner",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy crew's\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy gunner"
+          },
+          {
+            "varName": "showCrewLoader",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy crew's\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy loader"
+          }
+        ],
+        "settingsVersion": 3707,
+        "enabled": true,
+        "modDisplayName": "b4it - Chameleon Plus",
+        "column2": [
+          {
+            "varName": "buttonChameleonMode",
+            "defaultValue": [73],
+            "type": "HotKey",
+            "tooltip": "",
+            "value": [43],
+            "text": "Button: Change visual style"
+          },
+          {
+            "varName": "buttonShowMode",
+            "defaultValue": [82],
+            "type": "HotKey",
+            "tooltip": "",
+            "value": [82],
+            "text": "Button: Change mode"
+          },
+          {
+            "minimum": 2,
+            "text": "Show degree",
+            "varName": "magneticAngle",
+            "format": "{{value}}",
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 120,
+            "value": 15
+          },
+          {
+            "varName": "showDevicesAmmoBay",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy modules\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy ammo bay"
+          },
+          {
+            "varName": "showDevicesFuelTank",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy modules\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy fuel tank"
+          },
+          {
+            "varName": "showDevicesEngine",
+            "type": "CheckBox",
+            "tooltip": "Display the location of enemy modules\u003C/br\u003EIf data available in battle\u003C/br\u003E",
+            "value": true,
+            "text": "Display the location of enemy  engine"
+          },
+          {
+            "varName": "showTracks",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "text": "Display the location of tracks"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "windowY": 0.759027777777778,
+        "version": 3708,
+        "mode": 1,
+        "windowHeight": 0.15,
+        "enabled": true,
+        "windowWidth": 0.15,
+        "windowX": 0.596484375,
+        "buttonShowDashCam": [77]
+      },
+      "name": "bait.two_dashCam",
+      "template": {
+        "column1": [
+          {
+            "width": 200,
+            "text": "Visual mode",
+            "tooltip": "",
+            "varName": "mode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003EStatic collision mode\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EDynamic penetration\u003C/font\u003E"
+              }
+            ],
+            "value": 1
+          }
+        ],
+        "settingsVersion": 3708,
+        "enabled": true,
+        "modDisplayName": "Pack II - Dash Cam",
+        "column2": [
+          {
+            "varName": "buttonShowDashCam",
+            "defaultValue": [77],
+            "type": "HotKey",
+            "tooltip": "",
+            "value": [77],
+            "text": "Button: Change mode"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "color": "#FFB6C1",
+        "version": 3707,
+        "enabled": true,
+        "mode": 0
+      },
+      "name": "bait.two_predictionShadow",
+      "template": {
+        "column1": [
+          {
+            "width": 200,
+            "text": "Visual mode",
+            "tooltip": "",
+            "varName": "mode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003EPrediction Ghost\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EPrediction Chameleon\u003C/font\u003E"
+              }
+            ],
+            "value": 0
+          }
+        ],
+        "settingsVersion": 3707,
+        "enabled": true,
+        "modDisplayName": "Pack II - Shot prediction phantom",
+        "column2": []
+      }
+    },
+    {
+      "values": {
+        "color": "#80ffcc",
+        "alpha": 50,
+        "version": 3707,
+        "enabled": true
+      },
+      "name": "bait.two_ghostShadow",
+      "template": {
+        "column1": [
+          {
+            "minimum": 10,
+            "text": "Alpha",
+            "varName": "alpha",
+            "format": "{{value}}",
+            "snapInterval": 10,
+            "type": "Slider",
+            "maximum": 200,
+            "value": 50
+          }
+        ],
+        "settingsVersion": 3707,
+        "enabled": true,
+        "modDisplayName": "Pack II - Phantom of missing enemy",
+        "column2": []
+      }
+    },
+    {
+      "values": {
+        "color": "#00ffff",
+        "alpha": 70,
+        "version": 3707,
+        "enabled": true
+      },
+      "name": "bait.two_shotShadow",
+      "template": {
+        "column1": [
+          {
+            "minimum": 10,
+            "text": "Alpha",
+            "varName": "alpha",
+            "format": "{{value}}",
+            "snapInterval": 10,
+            "type": "Slider",
+            "maximum": 200,
+            "value": 70
+          }
+        ],
+        "settingsVersion": 3707,
+        "enabled": true,
+        "modDisplayName": "Pack II - Shot point phantom",
+        "column2": []
+      }
+    },
+    {
+      "values": {
+        "panelLeft_reloading_enabled": true,
+        "panelRight_reloading_textMode": 3,
+        "panel_offsetY": 64,
+        "panel_offsetX": 0,
+        "panelLeft_clipBar_enabled": false,
+        "panelLeft_hitPoints_enabled": false,
+        "enabled": true,
+        "panel_widthShort": 160,
+        "panelLeft_reloading_textMode": 3,
+        "panelRight_reloading_enabled": true,
+        "panelRight_hitPoints_enabled": false,
+        "panel_widthMedium": 220,
+        "panel_widthMedium2": 235,
+        "panel_rowHeight": 25,
+        "version": 3109,
+        "panelRight_clipBar_enabled": false,
+        "panel_widthLarge": 360,
+        "buttonAltInfo": true,
+        "hitPoints_colorRight": 1,
+        "hitPoints_colorLeft": 0
+      },
+      "name": "bait.playersPanel",
+      "template": {
+        "column1": [
+          {
+            "text": "Show everything when ALT button is pressed",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "buttonAltInfo"
+          },
+          {
+            "type": "Label",
+            "text": "Left Panel:",
+            "tooltip": ""
+          },
+          {
+            "text": "Hit points bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "panelLeft_hitPoints_enabled"
+          },
+          {
+            "text": "Reloading bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "panelLeft_reloading_enabled"
+          },
+          {
+            "text": "Clip bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "panelLeft_clipBar_enabled"
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Reloading text",
+            "varName": "panelLeft_reloading_textMode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003EOff\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003EAll\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A802A8\"\u003ELong(\u003E10 sec.)\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOnly Arty\u003C/font\u003E"
+              }
+            ],
+            "value": 3
+          }
+        ],
+        "settingsVersion": 3109,
+        "enabled": true,
+        "modDisplayName": "b4it - Players panel",
+        "column2": [
+          {
+            "type": "Label",
+            "text": "Right Panel:",
+            "tooltip": ""
+          },
+          {
+            "text": "Hit points bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "panelRight_hitPoints_enabled"
+          },
+          {
+            "text": "Reloading bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "panelRight_reloading_enabled"
+          },
+          {
+            "text": "Clip bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "panelRight_clipBar_enabled"
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Reloading text",
+            "varName": "panelRight_reloading_textMode",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003EOff\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003EAll\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A802A8\"\u003ELong(\u003E10 sec.)\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOnly Arty\u003C/font\u003E"
+              }
+            ],
+            "value": 3
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "profile": 1,
+        "showAlly": false,
+        "colorEnemy": 2,
+        "showEnemy": true,
+        "showFullTimer": true,
+        "enabled": true,
+        "colorAlly": 7,
+        "showProgressBar": true,
+        "showTextReloadTimer": true,
+        "showTextClips": true,
+        "version": 3601,
+        "equipImproveOrMax": true,
+        "profiles": {
+          "progressBar": {
+            "enemy": {
+              "1": {
+                "sizeBackground": [72, 4],
+                "position": [0, -16, 0.5],
+                "size": [70, 2]
+              },
+              "0": {
+                "sizeBackground": [72, 4],
+                "position": [0, -16, 0.5],
+                "size": [70, 2]
+              }
+            },
+            "ally": {
+              "1": {
+                "sizeBackground": [72, 4],
+                "position": [0, -16, 0.5],
+                "size": [70, 2]
+              },
+              "0": {
+                "sizeBackground": [72, 4],
+                "position": [0, -16, 0.5],
+                "size": [70, 2]
+              }
+            }
+          },
+          "textReloadTimer": {
+            "enemy": {
+              "1": {
+                "position": [0, -68, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 24
+              },
+              "0": {
+                "position": [0, -68, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 24
+              }
+            },
+            "ally": {
+              "1": {
+                "position": [0, -68, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 24
+              },
+              "0": {
+                "position": [0, -68, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 24
+              }
+            }
+          },
+          "textClips": {
+            "enemy": {
+              "1": {
+                "position": [46, -16, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 14
+              },
+              "0": {
+                "position": [46, -16, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 14
+              }
+            },
+            "ally": {
+              "1": {
+                "position": [46, -16, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 14
+              },
+              "0": {
+                "position": [46, -16, 0.5],
+                "fontBold": true,
+                "font": 0,
+                "fontSize": 14
+              }
+            }
+          }
+        },
+        "changeTextClipsStyle": false
+      },
+      "name": "bait.reloadInfo",
+      "template": {
+        "column1": [
+          {
+            "text": "Show Ally reload data",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "showAlly"
+          },
+          {
+            "text": "Show Enemy reload data",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showEnemy"
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Ally: Color change",
+            "varName": "colorAlly",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EWhite\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008080\"\u003EBlue-green\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#C0C0C0\"\u003ESilver\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ETurquoise\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00ff00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCC91E\"\u003ELight-orange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF00FF\"\u003EFuchsia\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#C71C1C\"\u003EMaroon\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#000080\"\u003EDark-blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A802A8\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003Ered\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#000000\"\u003Eblack\u003C/font\u003E"
+              }
+            ],
+            "value": 7
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Enemy: Color change",
+            "varName": "colorEnemy",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EWhite\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008080\"\u003EBlue-green\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#C0C0C0\"\u003ESilver\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ETurquoise\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00ff00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCC91E\"\u003ELight-orange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF00FF\"\u003EFuchsia\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#C71C1C\"\u003EMaroon\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#000080\"\u003EDark-blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A802A8\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003Ered\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#000000\"\u003Eblack\u003C/font\u003E"
+              }
+            ],
+            "value": 2
+          }
+        ],
+        "settingsVersion": 3601,
+        "enabled": true,
+        "modDisplayName": "b4it - Reload Info",
+        "column2": [
+          {
+            "text": "Progress bar",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showProgressBar"
+          },
+          {
+            "text": "Text: Reload timer",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showTextReloadTimer"
+          },
+          {
+            "text": "Text: Clips",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showTextClips"
+          },
+          {
+            "text": "Change clips style",
+            "type": "CheckBox",
+            "tooltip": "Change clips style\u003C/br\u003E[3/4] or [.lll]\u003C/br\u003E",
+            "value": false,
+            "varName": "changeTextClipsStyle"
+          },
+          {
+            "text": "Show timer: sec or msec",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showFullTimer"
+          },
+          {
+            "text": "Calculate reload with Improve or Max equip",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "equipImproveOrMax"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "soundArtyMatched": true,
+        "enabled": true,
+        "version": 3108,
+        "showArtyTrace": true
+      },
+      "name": "bait.enemyShotPlace",
+      "template": {
+        "column1": [
+          {
+            "text": "Play sound when Arty matched",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "soundArtyMatched"
+          }
+        ],
+        "settingsVersion": 3108,
+        "enabled": true,
+        "modDisplayName": "b4it - Enemy shot place",
+        "column2": [
+          {
+            "text": "Show arty trajectory",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "showArtyTrace"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "version": 4004,
+        "buttonForcedEnable": [16],
+        "buttonMode": [80],
+        "buttonInvert": [
+          [56, 184]
+        ],
+        "defaultSniper": 0,
+        "enabled": true,
+        "defaultArcade": 0,
+        "defaultStrategic": 0
+      },
+      "name": "bait.tundr",
+      "template": {
+        "column1": [
+          {
+            "text": "Button: Tundra Mode",
+            "defaultValue": [80],
+            "type": "HotKey",
+            "value": [80],
+            "tooltip": "Button: Tundra Mode\u003C/br\u003Echange Tundra mode: Off, Full tundra, Partial tundra\u003C/br\u003E",
+            "varName": "buttonMode"
+          },
+          {
+            "text": "Button: Invert Tundra",
+            "defaultValue": [
+              [56, 184]
+            ],
+            "type": "HotKey",
+            "value": [
+              [56, 184]
+            ],
+            "tooltip": "Button: Invert Tundra\u003C/br\u003EFast enable/disable tundra when pressed\u003C/br\u003E",
+            "varName": "buttonInvert"
+          },
+          {
+            "text": "Button: Forced Full Tundra",
+            "defaultValue": [82, [56, 184]
+            ],
+            "type": "HotKey",
+            "value": [16],
+            "tooltip": "Button: Forced Full Tundra\u003C/br\u003EForced enable Full Tundra\u003C/br\u003E",
+            "varName": "buttonForcedEnable"
+          }
+        ],
+        "settingsVersion": 4004,
+        "enabled": true,
+        "modDisplayName": "b4it - Tundra",
+        "column2": [
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Default: Arcade",
+            "varName": "defaultArcade",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003ETundra: OFF\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003ETundra: FULL\u003C/font\u003E"
+              }
+            ],
+            "value": 0
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Default: Sniper & Arty Sniper",
+            "varName": "defaultSniper",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003ETundra: OFF\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003ETundra: FULL\u003C/font\u003E"
+              }
+            ],
+            "value": 0
+          },
+          {
+            "width": 200,
+            "type": "Dropdown",
+            "text": "Default: Strategic",
+            "varName": "defaultStrategic",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003ETundra: OFF\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#84DE40\"\u003ETundra: FULL\u003C/font\u003E"
+              }
+            ],
+            "value": 0
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "LampBigTimerTextSize": 48,
+        "soundDogBarking": true,
+        "showBorder": false,
+        "showLamp": true,
+        "yLamp": -34,
+        "soundLampTick": true,
+        "xLamp": 16,
+        "enabled": true,
+        "showSelfSpotCheckPoints": 2,
+        "LampBigTimerTextColor": "#FCF5C8",
+        "height": 200,
+        "width": 450,
+        "drag": false,
+        "version": 3701,
+        "showLampBigTimer": true,
+        "showText": true,
+        "y": -150,
+        "x": 400,
+        "showBattleTextDescription": true
+      },
+      "name": "bait.spot6thSense",
+      "template": {
+        "column1": [
+          {
+            "text": "Show spotted details",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showText"
+          },
+          {
+            "text": "Text panel: show battle description",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showBattleTextDescription"
+          },
+          {
+            "text": "Show 6th sense icon with timer",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showLamp"
+          },
+          {
+            "text": "Show 6th sense big Lamp timer",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showLampBigTimer"
+          },
+          {
+            "text": "Show border on text in battle",
+            "defaultValue": false,
+            "type": "CheckBox",
+            "value": false,
+            "tooltip": "False\u003Cbr/\u003E",
+            "varName": "showBorder"
+          },
+          {
+            "text": "Enable drag text in battle",
+            "defaultValue": false,
+            "type": "CheckBox",
+            "value": false,
+            "tooltip": "False\u003Cbr/\u003E",
+            "varName": "drag"
+          },
+          {
+            "text": "Play dog barking sound",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "soundDogBarking"
+          },
+          {
+            "text": "Play tick-tack sound",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "soundLampTick"
+          },
+          {
+            "width": 200,
+            "value": 2,
+            "varName": "showSelfSpotCheckPoints",
+            "text": "Show self spot checkpoints",
+            "defaultValue": 2,
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EOff\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EAll\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003ECritical and Warning Only\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003ECritical Only\u003C/font\u003E"
+              }
+            ],
+            "tooltip": "2\u003Cbr/\u003E"
+          }
+        ],
+        "settingsVersion": 3701,
+        "enabled": true,
+        "modDisplayName": "b4it : spot 6th Sense",
+        "column2": [
+          {
+            "text": "Big Lamp: Text color",
+            "defaultValue": "#FCF5C8",
+            "type": "ColorHEX",
+            "value": "#FCF5C8",
+            "tooltip": "#FCF5C8\u003Cbr/\u003E",
+            "varName": "LampBigTimerTextColor"
+          },
+          {
+            "varName": "x",
+            "minimum": -1000,
+            "value": 400,
+            "format": "{{value}} ",
+            "text": "Text panel: X position",
+            "defaultValue": 400,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "400\u003Cbr/\u003E"
+          },
+          {
+            "varName": "y",
+            "minimum": -1000,
+            "value": -150,
+            "format": "{{value}} ",
+            "text": "Text panel: Y position",
+            "defaultValue": -150,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "-150\u003Cbr/\u003E"
+          },
+          {
+            "varName": "width",
+            "minimum": 50,
+            "value": 450,
+            "format": "{{value}} ",
+            "text": "Text panel: width",
+            "defaultValue": 450,
+            "snapInterval": 10,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "450\u003Cbr/\u003E"
+          },
+          {
+            "varName": "height",
+            "minimum": 50,
+            "value": 200,
+            "format": "{{value}} ",
+            "text": "Text panel: height",
+            "defaultValue": 200,
+            "snapInterval": 10,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "200\u003Cbr/\u003E"
+          },
+          {
+            "varName": "LampBigTimerTextSize",
+            "minimum": 6,
+            "value": 48,
+            "format": "{{value}} ",
+            "text": "Big Lamp: Timer font size",
+            "defaultValue": 48,
+            "snapInterval": 2,
+            "type": "Slider",
+            "maximum": 72,
+            "tooltip": "48\u003Cbr/\u003E"
+          },
+          {
+            "varName": "xLamp",
+            "minimum": -1000,
+            "value": 16,
+            "format": "{{value}} ",
+            "text": "Big Lamp: X position",
+            "defaultValue": 16,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "16\u003Cbr/\u003E"
+          },
+          {
+            "varName": "yLamp",
+            "minimum": -1000,
+            "value": -34,
+            "format": "{{value}} ",
+            "text": "Big Lamp: Y position",
+            "defaultValue": -34,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 1000,
+            "tooltip": "-34\u003Cbr/\u003E"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "timerMin": 0.3,
+        "healCrew": true,
+        "restoreChassis": false,
+        "useGoldKits": true,
+        "enabled": true,
+        "repairDevices": true,
+        "repairPriority": {
+          "heavyTank": {
+            "medkit": [
+              "commander",
+              "loader",
+              "gunner",
+              "driver"
+            ],
+            "repairkit": [
+              "turretRotator",
+              "ammoBay",
+              "engine",
+              "gun",
+              "fuelTank"
+            ]
+          },
+          "AllAvailableVariables": {
+            "medkit": [
+              "commander",
+              "gunner",
+              "driver",
+              "radioman",
+              "loader"
+            ],
+            "repairkit": [
+              "engine",
+              "ammoBay",
+              "gun",
+              "turretRotator",
+              "chassis",
+              "surveyingDevice",
+              "radio",
+              "fuelTank",
+              "wheel"
+            ]
+          },
+          "AT-SPG": {
+            "medkit": [
+              "loader",
+              "gunner",
+              "commander",
+              "driver"
+            ],
+            "repairkit": [
+              "ammoBay",
+              "gun",
+              "engine",
+              "turretRotator",
+              "fuelTank"
+            ]
+          },
+          "mediumTank": {
+            "medkit": [
+              "loader",
+              "driver",
+              "commander",
+              "gunner"
+            ],
+            "repairkit": [
+              "turretRotator",
+              "engine",
+              "ammoBay",
+              "gun",
+              "fuelTank"
+            ]
+          },
+          "lightTank": {
+            "medkit": [
+              "driver",
+              "commander",
+              "gunner",
+              "loader"
+            ],
+            "repairkit": [
+              "engine",
+              "ammoBay",
+              "gun",
+              "turretRotator",
+              "fuelTank"
+            ]
+          },
+          "SPG": {
+            "medkit": [
+              "commander",
+              "loader",
+              "gunner",
+              "driver"
+            ],
+            "repairkit": [
+              "ammoBay",
+              "engine",
+              "gun",
+              "turretRotator",
+              "fuelTank"
+            ]
+          }
+        },
+        "autoRepair": true,
+        "extinguishFire": true,
+        "version": 3004,
+        "buttonRepair": [57],
+        "removeStun": false,
+        "timerMax": 0.8,
+        "buttonChassis": [
+          [56, 184]
+        ]
+      },
+      "name": "bait.repair",
+      "template": {
+        "column1": [
+          {
+            "text": "Button: Smart Repair",
+            "defaultValue": [57],
+            "type": "HotKey",
+            "value": [57],
+            "tooltip": "",
+            "varName": "buttonRepair"
+          },
+          {
+            "text": "Button: Restore Chassis",
+            "defaultValue": [
+              [56, 184]
+            ],
+            "type": "HotKey",
+            "value": [
+              [56, 184]
+            ],
+            "tooltip": "",
+            "varName": "buttonChassis"
+          },
+          {
+            "text": "Auto usage",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "autoRepair"
+          },
+          {
+            "text": "Use Gold Kits",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "useGoldKits"
+          },
+          {
+            "varName": "timerMin",
+            "minimum": 0.1,
+            "format": "{{value}} sec.",
+            "text": "Min delay auto usage",
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 0.5,
+            "value": 0.3
+          },
+          {
+            "varName": "timerMax",
+            "minimum": 0.6,
+            "format": "{{value}} sec.",
+            "text": "Max delay auto usage",
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 3,
+            "value": 0.8
+          }
+        ],
+        "settingsVersion": 3004,
+        "enabled": true,
+        "modDisplayName": "b4it - Smart Repair",
+        "column2": [
+          {
+            "text": "Restore chassis",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "restoreChassis"
+          },
+          {
+            "text": "Remove stun",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "removeStun"
+          },
+          {
+            "text": "Extinguish fire",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "extinguishFire"
+          },
+          {
+            "text": "Heal crew",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "healCrew"
+          },
+          {
+            "text": "Repair devices",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "varName": "repairDevices"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "colorEnemyVisibleWithCameraOnlyAlpha": 2,
+        "colorEnemyCoveredAlpha": 2,
+        "version": 4001,
+        "showEnemyVisibleWithCameraOnly": true,
+        "showEnemyCovered": true,
+        "colorEnemyVisibleWithCameraOnly": "#F200DA",
+        "showEnemyVisible": true,
+        "colorEnemyVisible": "#FF1207",
+        "colorEnemyVisibleAlpha": 2,
+        "enabled": false,
+        "colorEnemyCovered": "#FCF5C8"
+      },
+      "name": "bait.x-ray",
+      "template": {
+        "column1": [
+          {
+            "text": "Color: \"not visible\"",
+            "defaultValue": "#FCF5C8",
+            "type": "ColorHEX",
+            "value": "#FCF5C8",
+            "tooltip": "#FCF5C8\u003Cbr/\u003E",
+            "varName": "colorEnemyCovered"
+          },
+          {
+            "text": "Color: \"visible\"",
+            "defaultValue": "#FF1207",
+            "type": "ColorHEX",
+            "value": "#FF1207",
+            "tooltip": "#FF1207\u003Cbr/\u003E",
+            "varName": "colorEnemyVisible"
+          },
+          {
+            "text": "Color: \"visible with Camera only\"",
+            "defaultValue": "#F200DA",
+            "type": "ColorHEX",
+            "value": "#F200DA",
+            "tooltip": "#F200DA\u003Cbr/\u003E",
+            "varName": "colorEnemyVisibleWithCameraOnly"
+          },
+          {
+            "text": "XRay to \"not visible\"",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showEnemyCovered"
+          },
+          {
+            "text": "XRay to \"visible\"",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showEnemyVisible"
+          },
+          {
+            "text": "XRay to \"visible with Camera only\"",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "showEnemyVisibleWithCameraOnly"
+          }
+        ],
+        "settingsVersion": 4001,
+        "enabled": false,
+        "modDisplayName": "X-Ray",
+        "column2": [
+          {
+            "width": 200,
+            "value": 2,
+            "varName": "colorEnemyCoveredAlpha",
+            "text": "Alpha: \"not visible\"",
+            "defaultValue": 2,
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E255% maximum\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E150% overpower\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003E100% default\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E80% high\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E60% medium\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E40% low\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E20% minimum\u003C/font\u003E"
+              }
+            ],
+            "tooltip": "2\u003Cbr/\u003E"
+          },
+          {
+            "width": 200,
+            "value": 2,
+            "varName": "colorEnemyVisibleAlpha",
+            "text": "Alpha: \"visible\"",
+            "defaultValue": 2,
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E255% maximum\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E150% overpower\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003E100% default\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E80% high\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E60% medium\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E40% low\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E20% minimum\u003C/font\u003E"
+              }
+            ],
+            "tooltip": "2\u003Cbr/\u003E"
+          },
+          {
+            "width": 200,
+            "value": 2,
+            "varName": "colorEnemyVisibleWithCameraOnlyAlpha",
+            "text": "Alpha: \"visible with Camera only\"",
+            "defaultValue": 2,
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E255% maximum\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E150% overpower\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003E100% default\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E80% high\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E60% medium\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E40% low\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003E20% minimum\u003C/font\u003E"
+              }
+            ],
+            "tooltip": "2\u003Cbr/\u003E"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "showAlly": true,
+        "ARMOR_PIERCING_CR": 10,
+        "ARMOR_PIERCING": 4,
+        "ARMOR_PIERCING_HE_GOLD": 13,
+        "ARMOR_PIERCING_CR_Transparency": 2,
+        "ARMOR_PIERCING_CR_GOLD": 27,
+        "HOLLOW_CHARGE_Transparency": 2,
+        "ARMOR_PIERCING_GOLD": 4,
+        "flyTime": 2,
+        "enabled": true,
+        "HIGH_EXPLOSIVE_GOLD": 17,
+        "minSize": 0.1,
+        "HOLLOW_CHARGE_GOLD": 19,
+        "ARMOR_PIERCING_HE": 13,
+        "HIGH_EXPLOSIVE": 20,
+        "version": 3502,
+        "showOnlyGold": true,
+        "HIGH_EXPLOSIVE_Transparency": 2,
+        "ARMOR_PIERCING_Transparency": 2,
+        "ARMOR_PIERCING_HE_Transparency": 2,
+        "showOnlyEnemyArty": false,
+        "HOLLOW_CHARGE": 28
+      },
+      "name": "bait.tracers",
+      "template": {
+        "column1": [
+          {
+            "varName": "showAlly",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "text": "Show Ally tracers"
+          },
+          {
+            "varName": "showOnlyEnemyArty",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "text": "Only enemy arty [All others not showing]"
+          },
+          {
+            "varName": "showOnlyGold",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "text": "Show only Premium tracers"
+          },
+          {
+            "minimum": 0,
+            "text": "Increase show time",
+            "varName": "flyTime",
+            "format": "{{value}} sec.",
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 10,
+            "value": 2
+          },
+          {
+            "minimum": 0.1,
+            "text": "Minimum tracer thickness",
+            "varName": "minSize",
+            "format": "{{value}} + caliber",
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 1.1,
+            "value": 0.1
+          },
+          {
+            "width": 200,
+            "text": "Color: Armor Piercing (AP)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 4
+          },
+          {
+            "width": 200,
+            "text": "Color: Premium (AP)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_GOLD",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 4
+          },
+          {
+            "width": 200,
+            "text": "Transparency: (AP)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_Transparency",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "20% minimum"
+              },
+              {
+                "label": "40% low"
+              },
+              {
+                "label": "60% medium"
+              },
+              {
+                "label": "80% high"
+              },
+              {
+                "label": "100% default"
+              },
+              {
+                "label": "150% overpower"
+              },
+              {
+                "label": "255% maximum"
+              }
+            ],
+            "value": 2
+          },
+          {
+            "width": 200,
+            "text": "Color: High Explosive AT (HEAT)",
+            "tooltip": "",
+            "varName": "HOLLOW_CHARGE",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 28
+          },
+          {
+            "width": 200,
+            "text": "Color: Premium (HEAT)",
+            "tooltip": "",
+            "varName": "HOLLOW_CHARGE_GOLD",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 19
+          },
+          {
+            "width": 200,
+            "text": "Transparency: (HEAT)",
+            "tooltip": "",
+            "varName": "HOLLOW_CHARGE_Transparency",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "20% minimum"
+              },
+              {
+                "label": "40% low"
+              },
+              {
+                "label": "60% medium"
+              },
+              {
+                "label": "80% high"
+              },
+              {
+                "label": "100% default"
+              },
+              {
+                "label": "150% overpower"
+              },
+              {
+                "label": "255% maximum"
+              }
+            ],
+            "value": 2
+          }
+        ],
+        "settingsVersion": 3502,
+        "enabled": true,
+        "modDisplayName": "b4it - Tracers",
+        "column2": [
+          {
+            "width": 200,
+            "text": "Color: Armor Piercing CR (APCR)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_CR",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 10
+          },
+          {
+            "width": 200,
+            "text": "Color: Premium (APCR)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_CR_GOLD",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 27
+          },
+          {
+            "width": 200,
+            "text": "Transparency: (APCR)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_CR_Transparency",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "20% minimum"
+              },
+              {
+                "label": "40% low"
+              },
+              {
+                "label": "60% medium"
+              },
+              {
+                "label": "80% high"
+              },
+              {
+                "label": "100% default"
+              },
+              {
+                "label": "150% overpower"
+              },
+              {
+                "label": "255% maximum"
+              }
+            ],
+            "value": 2
+          },
+          {
+            "width": 200,
+            "text": "Color: High Explosive (HE)",
+            "tooltip": "",
+            "varName": "HIGH_EXPLOSIVE",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 20
+          },
+          {
+            "width": 200,
+            "text": "Color: Premium (HE)",
+            "tooltip": "",
+            "varName": "HIGH_EXPLOSIVE_GOLD",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 17
+          },
+          {
+            "width": 200,
+            "text": "Transparency: (HE)",
+            "tooltip": "",
+            "varName": "HIGH_EXPLOSIVE_Transparency",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "20% minimum"
+              },
+              {
+                "label": "40% low"
+              },
+              {
+                "label": "60% medium"
+              },
+              {
+                "label": "80% high"
+              },
+              {
+                "label": "100% default"
+              },
+              {
+                "label": "150% overpower"
+              },
+              {
+                "label": "255% maximum"
+              }
+            ],
+            "value": 2
+          },
+          {
+            "width": 200,
+            "text": "Color: High Explosive SH (HESH)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_HE",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 13
+          },
+          {
+            "width": 200,
+            "text": "Color: Premium (HESH)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_HE_GOLD",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "\u003Cfont color=\"#808080\"\u003EDefault: Myself\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF1207\"\u003EDefault: Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7CD606\"\u003EDefault: Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFFFF\"\u003EDefault: Flag\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#7F7F7F\"\u003EOriginal\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#0000FF\"\u003EBlue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#A52A2B\"\u003EBrown\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#D3691E\"\u003EChocolate\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#6595EE\"\u003ECornflower Blue\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FCF5C8\"\u003ECream\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FFFF\"\u003ECyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#28F09C\"\u003EEmerald\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFD700\"\u003EGold\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#008000\"\u003EGreen\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#ADFF2E\"\u003EGreen Yellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF69B5\"\u003EHot Pink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#00FF00\"\u003ELime\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFA500\"\u003EOrange\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFC0CB\"\u003EPink\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#800080\"\u003EPurple\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FF0000\"\u003ERed\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#8378FC\"\u003EWG Blur\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#DB0400\"\u003EWG Enemy\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#80D639\"\u003EWG Friend\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFE041\"\u003EWG Squad\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FFFF00\"\u003EYellow\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#FA8072\"\u003ENice Red\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#1CC6D9\"\u003EVivid Cyan\u003C/font\u003E"
+              },
+              {
+                "label": "\u003Cfont color=\"#F200DA\"\u003EPure Magenta\u003C/font\u003E"
+              }
+            ],
+            "value": 13
+          },
+          {
+            "width": 200,
+            "text": "Transparency: (HESH)",
+            "tooltip": "",
+            "varName": "ARMOR_PIERCING_HE_Transparency",
+            "itemRenderer": "DropDownListItemRendererSound",
+            "type": "Dropdown",
+            "options": [
+              {
+                "label": "20% minimum"
+              },
+              {
+                "label": "40% low"
+              },
+              {
+                "label": "60% medium"
+              },
+              {
+                "label": "80% high"
+              },
+              {
+                "label": "100% default"
+              },
+              {
+                "label": "150% overpower"
+              },
+              {
+                "label": "255% maximum"
+              }
+            ],
+            "value": 2
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "COLORS": {
+          "ENEMY": {
+            "NOT_PIERCED": "#8378FC",
+            "LITTLE_PIERCED": "#FFE041",
+            "UNDEFINED": "#8378FC",
+            "UNDEFINED_TRANSPARENCY": 60,
+            "LITTLE_PIERCED_TRANSPARENCY": 60,
+            "NOT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED": "#FA8072"
+          },
+          "ENEMY_SPG": {
+            "NOT_PIERCED": "#FF0000",
+            "LITTLE_PIERCED": "#FF0000",
+            "UNDEFINED": "#A52A2B",
+            "UNDEFINED_TRANSPARENCY": 60,
+            "LITTLE_PIERCED_TRANSPARENCY": 60,
+            "NOT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED": "#FF0000"
+          },
+          "ALLY": {
+            "NOT_PIERCED": "#DB0400",
+            "LITTLE_PIERCED": "#FFE041",
+            "UNDEFINED": "#FCF5C8",
+            "UNDEFINED_TRANSPARENCY": 100,
+            "LITTLE_PIERCED_TRANSPARENCY": 100,
+            "NOT_PIERCED_TRANSPARENCY": 100,
+            "GREAT_PIERCED_TRANSPARENCY": 100,
+            "GREAT_PIERCED": "#80D639"
+          },
+          "ALLY_SPG": {
+            "NOT_PIERCED": "#00FFFF",
+            "LITTLE_PIERCED": "#00FFFF",
+            "UNDEFINED": "#0000FF",
+            "UNDEFINED_TRANSPARENCY": 60,
+            "LITTLE_PIERCED_TRANSPARENCY": 60,
+            "NOT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED_TRANSPARENCY": 60,
+            "GREAT_PIERCED": "#00FFFF"
+          }
+        },
+        "showPossibleDamage": false,
+        "showAllySPG": false,
+        "version": 3651,
+        "enabled": true,
+        "button": [79],
+        "showDamageAsSize": true,
+        "activated": true,
+        "minimumLaserSize": 0.1,
+        "show_only_if_they_see_you": true,
+        "showSelfLaser": false
+      },
+      "name": "bait.laser",
+      "template": {
+        "column1": [
+          {
+            "varName": "activated",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "text": "Enable on start battle"
+          },
+          {
+            "varName": "showPossibleDamage",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "text": "Colored damage lasers"
+          },
+          {
+            "varName": "showAllySPG",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "text": "Show lasers on Artillery allys"
+          },
+          {
+            "varName": "showSelfLaser",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "text": "Show laser on self vehicle"
+          }
+        ],
+        "settingsVersion": 3651,
+        "enabled": true,
+        "modDisplayName": "b4it - Lasers",
+        "column2": [
+          {
+            "varName": "button",
+            "defaultValue": [79],
+            "type": "HotKey",
+            "tooltip": "",
+            "value": [79],
+            "text": "Button: Activation"
+          },
+          {
+            "varName": "show_only_if_they_see_you",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "text": "Showing you if you're at enemy range"
+          },
+          {
+            "varName": "showDamageAsSize",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": true,
+            "text": "Damage increases laser thickness"
+          },
+          {
+            "type": "Label",
+            "text": "To change colors, edit config file",
+            "tooltip": "To change colors, edit config file\u003C/br\u003Efile path: /mods/configs/bait/laser/laser.json\nTo edit that file use special editor program, Notepad++, search it in google\u003C/br\u003E"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "version": 4001,
+        "groundMarker": true,
+        "iconSize": 100,
+        "showTimer": 3,
+        "enabled": true,
+        "mapMarker": true,
+        "mapMarkerColor": "#FFFFFF"
+      },
+      "name": "bait.destructibleOnMap",
+      "template": {
+        "column1": [
+          {
+            "text": "Show marker on minimap",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "mapMarker"
+          },
+          {
+            "text": "Show marker on ground",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "groundMarker"
+          },
+          {
+            "text": "Set minimap marker color",
+            "defaultValue": "#FFFFFF",
+            "type": "ColorHEX",
+            "value": "#FFFFFF",
+            "tooltip": "#FFFFFF\u003Cbr/\u003E",
+            "varName": "mapMarkerColor"
+          }
+        ],
+        "settingsVersion": 4001,
+        "enabled": true,
+        "modDisplayName": "b4it - Destructible objects on minimap",
+        "column2": [
+          {
+            "varName": "showTimer",
+            "minimum": 1,
+            "value": 3,
+            "format": "{{value}}  sec.",
+            "text": "Show destructible objects on minimap during time",
+            "defaultValue": 3,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 10,
+            "tooltip": "3.0\u003Cbr/\u003E"
+          },
+          {
+            "varName": "iconSize",
+            "minimum": 50,
+            "value": 100,
+            "format": "{{value}} %",
+            "text": "Size icons in percent",
+            "defaultValue": 100,
+            "snapInterval": 10,
+            "type": "Slider",
+            "maximum": 150,
+            "tooltip": "100\u003Cbr/\u003E"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "allyShowTimer": 6,
+        "allyColorHitPoint": "#A6FF00",
+        "allySoundHit": true,
+        "meShowTimer": 6,
+        "meHitPointSize": 0.5,
+        "squadHitPointSize": 0.5,
+        "allyShowText": true,
+        "squadColorText": "#ffd700",
+        "allyShowHitPoint": true,
+        "meColorText": "#00b7eb",
+        "meShowOnMinimap": true,
+        "squadShowOnMinimap": true,
+        "meSoundHit": true,
+        "squadColorHitPoint": "#ffd700",
+        "squadSoundHit": true,
+        "meShowHitPoint": true,
+        "squadShowTimer": 6,
+        "squadShowHitPoint": true,
+        "enabled": true,
+        "version": 4004,
+        "allyShowOnMinimap": true,
+        "allyHitPointSize": 0.5,
+        "allyColorText": "#A6FF00",
+        "squadShowText": true,
+        "meShowText": true,
+        "meColorHitPoint": "#00b7eb"
+      },
+      "name": "bait.somethingWasHit",
+      "template": {
+        "column1": [
+          {
+            "text": "Me: show hit point",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "meShowHitPoint"
+          },
+          {
+            "text": "Squad: show hit point",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "squadShowHitPoint"
+          },
+          {
+            "text": "Ally: show hit point",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "allyShowHitPoint"
+          },
+          {
+            "text": "Me: show popup message",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "meShowText"
+          },
+          {
+            "text": "Squad: show popup message",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "squadShowText"
+          },
+          {
+            "text": "Ally: show popup message",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "allyShowText"
+          },
+          {
+            "text": "Me: hit sound",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "meSoundHit"
+          },
+          {
+            "text": "Squad: hit sound",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "squadSoundHit"
+          },
+          {
+            "text": "Ally: hit sound",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "allySoundHit"
+          },
+          {
+            "text": "Me: show on minimap",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "meShowOnMinimap"
+          },
+          {
+            "text": "Squad: show on minimap",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "squadShowOnMinimap"
+          },
+          {
+            "text": "Ally: show on minimap",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "allyShowOnMinimap"
+          },
+          {
+            "text": "Me: hit point color",
+            "defaultValue": "#00b7eb",
+            "type": "ColorHEX",
+            "value": "#00b7eb",
+            "tooltip": "#00b7eb\u003Cbr/\u003E",
+            "varName": "meColorHitPoint"
+          },
+          {
+            "text": "Squad: hit point color",
+            "defaultValue": "#ffd700",
+            "type": "ColorHEX",
+            "value": "#ffd700",
+            "tooltip": "#ffd700\u003Cbr/\u003E",
+            "varName": "squadColorHitPoint"
+          },
+          {
+            "text": "Ally: hit point color",
+            "defaultValue": "#A6FF00",
+            "type": "ColorHEX",
+            "value": "#A6FF00",
+            "tooltip": "#A6FF00\u003Cbr/\u003E",
+            "varName": "allyColorHitPoint"
+          },
+          {
+            "text": "Me: popup message color",
+            "defaultValue": "#00b7eb",
+            "type": "ColorHEX",
+            "value": "#00b7eb",
+            "tooltip": "#00b7eb\u003Cbr/\u003E",
+            "varName": "meColorText"
+          },
+          {
+            "text": "Squad: popup message color",
+            "defaultValue": "#ffd700",
+            "type": "ColorHEX",
+            "value": "#ffd700",
+            "tooltip": "#ffd700\u003Cbr/\u003E",
+            "varName": "squadColorText"
+          },
+          {
+            "text": "Ally: popup message color",
+            "defaultValue": "#A6FF00",
+            "type": "ColorHEX",
+            "value": "#A6FF00",
+            "tooltip": "#A6FF00\u003Cbr/\u003E",
+            "varName": "allyColorText"
+          },
+          {
+            "varName": "meShowTimer",
+            "minimum": 1,
+            "value": 6,
+            "format": "{{value}} ",
+            "text": "Me: timer (sec.)",
+            "defaultValue": 6,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 10,
+            "tooltip": "6\u003Cbr/\u003E"
+          },
+          {
+            "varName": "squadShowTimer",
+            "minimum": 1,
+            "value": 6,
+            "format": "{{value}} ",
+            "text": "Squad: timer (sec.)",
+            "defaultValue": 6,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 10,
+            "tooltip": "6\u003Cbr/\u003E"
+          },
+          {
+            "varName": "allyShowTimer",
+            "minimum": 1,
+            "value": 6,
+            "format": "{{value}} ",
+            "text": "Ally: timer (sec.)",
+            "defaultValue": 6,
+            "snapInterval": 1,
+            "type": "Slider",
+            "maximum": 10,
+            "tooltip": "6\u003Cbr/\u003E"
+          },
+          {
+            "varName": "meHitPointSize",
+            "minimum": 0.1,
+            "value": 0.5,
+            "format": "{{value}} ",
+            "text": "Me: hit point size (m.)",
+            "defaultValue": 0.5,
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 3,
+            "tooltip": "0.5\u003Cbr/\u003E"
+          },
+          {
+            "varName": "squadHitPointSize",
+            "minimum": 0.1,
+            "value": 0.5,
+            "format": "{{value}} ",
+            "text": "Squad: hit point size (m.)",
+            "defaultValue": 0.5,
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 3,
+            "tooltip": "0.5\u003Cbr/\u003E"
+          },
+          {
+            "varName": "allyHitPointSize",
+            "minimum": 0.1,
+            "value": 0.5,
+            "format": "{{value}} ",
+            "text": "Ally: hit point size (m.)",
+            "defaultValue": 0.5,
+            "snapInterval": 0.1,
+            "type": "Slider",
+            "maximum": 3,
+            "tooltip": "0.5\u003Cbr/\u003E"
+          }
+        ],
+        "settingsVersion": 4004,
+        "enabled": true,
+        "modDisplayName": "Something was hit",
+        "column2": []
+      }
+    },
+    {
+      "values": {
+        "nearestEnemyCross": true,
+        "version": 4006,
+        "visibleEnemy": true,
+        "enabled": true,
+        "visibleEnemyColor": "#FF7F66",
+        "hidedEnemyDistance": 300,
+        "textDistance": true,
+        "hidedEnemyColor": "#808080",
+        "nearestEnemyDistance": 150,
+        "nearestEnemy": true,
+        "hidedEnemyCross": false,
+        "nearestEnemyColor": "#00FFFF",
+        "visibleEnemyCross": false,
+        "visibleEnemyDistance": 565,
+        "hidedEnemy": true,
+        "textVehicleName": true
+      },
+      "name": "bait.enemyBehind",
+      "template": {
+        "column1": [
+          {
+            "text": "Show: Nearest enemy",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "nearestEnemy"
+          },
+          {
+            "text": "Show: Hided enemy",
+            "defaultValue": false,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "False\u003Cbr/\u003E",
+            "varName": "hidedEnemy"
+          },
+          {
+            "text": "Show: Visible enemy",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "visibleEnemy"
+          },
+          {
+            "text": "Color: Nearest enemy",
+            "defaultValue": "#00FFFF",
+            "type": "ColorHEX",
+            "value": "#00FFFF",
+            "tooltip": "#00FFFF\u003Cbr/\u003E",
+            "varName": "nearestEnemyColor"
+          },
+          {
+            "text": "Color: Hided enemy",
+            "defaultValue": "#808080",
+            "type": "ColorHEX",
+            "value": "#808080",
+            "tooltip": "#808080\u003Cbr/\u003E",
+            "varName": "hidedEnemyColor"
+          },
+          {
+            "text": "Color: Visible enemy",
+            "defaultValue": "#FF7F66",
+            "type": "ColorHEX",
+            "value": "#FF7F66",
+            "tooltip": "#FF7F66\u003Cbr/\u003E",
+            "varName": "visibleEnemyColor"
+          },
+          {
+            "text": "Text: distance",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "textDistance"
+          },
+          {
+            "text": "Text: vehicle name",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "textVehicleName"
+          }
+        ],
+        "settingsVersion": 4006,
+        "enabled": true,
+        "modDisplayName": "Enemy Behind (Arrows)",
+        "column2": [
+          {
+            "text": "Cross Arrow: Nearest enemy",
+            "defaultValue": true,
+            "type": "CheckBox",
+            "value": true,
+            "tooltip": "True\u003Cbr/\u003E",
+            "varName": "nearestEnemyCross"
+          },
+          {
+            "text": "Cross Arrow: Hided enemy",
+            "defaultValue": false,
+            "type": "CheckBox",
+            "value": false,
+            "tooltip": "False\u003Cbr/\u003E",
+            "varName": "hidedEnemyCross"
+          },
+          {
+            "text": "Cross Arrow: Visible enemy",
+            "defaultValue": false,
+            "type": "CheckBox",
+            "value": false,
+            "tooltip": "False\u003Cbr/\u003E",
+            "varName": "visibleEnemyCross"
+          },
+          {
+            "varName": "nearestEnemyDistance",
+            "minimum": 50,
+            "value": 150,
+            "format": "{{value}} m.",
+            "text": "Max distance: Nearest enemy",
+            "defaultValue": 150,
+            "snapInterval": 5,
+            "type": "Slider",
+            "maximum": 565,
+            "tooltip": "150\u003Cbr/\u003E"
+          },
+          {
+            "varName": "hidedEnemyDistance",
+            "minimum": 50,
+            "value": 300,
+            "format": "{{value}} m.",
+            "text": "Max distance: Hided enemy",
+            "defaultValue": 300,
+            "snapInterval": 5,
+            "type": "Slider",
+            "maximum": 565,
+            "tooltip": "300\u003Cbr/\u003E"
+          },
+          {
+            "varName": "visibleEnemyDistance",
+            "minimum": 50,
+            "value": 565,
+            "format": "{{value}} m.",
+            "text": "Max distance: Visible enemy",
+            "defaultValue": 565,
+            "snapInterval": 5,
+            "type": "Slider",
+            "maximum": 565,
+            "tooltip": "565\u003Cbr/\u003E"
+          }
+        ]
+      }
+    },
+    {
+      "values": {
+        "enabled": true,
+        "version": 3101
+      },
+      "name": "bait.showAfterVisibleRange",
+      "template": {
+        "column1": [],
+        "settingsVersion": 3101,
+        "enabled": true,
+        "modDisplayName": "b4it - show vehicle markers after visible range",
+        "column2": []
+      }
+    },
+    {
+      "values": {
+        "blackSky": false,
+        "buttonBlackSky": [76],
+        "buttonGray": [72],
+        "version": 3112,
+        "disableAlphaObjects": false,
+        "disableFog": false,
+        "enabled": false,
+        "drawGray": false,
+        "xRayMask": true,
+        "buttonObjects": [81],
+        "buttonShadows": [71],
+        "disableShadows": false
+      },
+      "name": "bait.tweaks",
+      "template": {
+        "column1": [
+          {
+            "text": "Black sky",
+            "type": "CheckBox",
+            "tooltip": "Show black sky\u003C/br\u003E",
+            "value": false,
+            "varName": "blackSky"
+          },
+          {
+            "text": "Disable fog",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "disableFog"
+          },
+          {
+            "text": "Disable particles and transparent objects",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "disableAlphaObjects"
+          },
+          {
+            "text": "Disable shadows",
+            "type": "CheckBox",
+            "tooltip": "",
+            "value": false,
+            "varName": "disableShadows"
+          },
+          {
+            "text": "Desaturate terrain and environment",
+            "type": "CheckBox",
+            "tooltip": "Draw terrain and static objects in grey. Tanks remain in color. Only for Improved graphics.\u003C/br\u003E",
+            "value": false,
+            "varName": "drawGray"
+          }
+        ],
+        "settingsVersion": 3112,
+        "enabled": false,
+        "modDisplayName": "b4it - Tweaks",
+        "column2": [
+          {
+            "text": "Button: Black sky",
+            "defaultValue": [76],
+            "type": "HotKey",
+            "value": [76],
+            "tooltip": "",
+            "varName": "buttonBlackSky"
+          },
+          {
+            "text": "Button: Transparent objects",
+            "defaultValue": [81],
+            "type": "HotKey",
+            "value": [81],
+            "tooltip": "",
+            "varName": "buttonObjects"
+          },
+          {
+            "text": "Button: Shadows",
+            "defaultValue": [71],
+            "type": "HotKey",
+            "value": [71],
+            "tooltip": "",
+            "varName": "buttonShadows"
+          },
+          {
+            "text": "Button: Draw gray",
+            "defaultValue": [72],
+            "type": "HotKey",
+            "value": [72],
+            "tooltip": "",
+            "varName": "buttonGray"
+          }
+        ]
+      }
+    }
+  ]
